@@ -2,8 +2,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router'
-import '../node_modules/typeface-inter/inter.css'
+import router from './router' 
+import 'typeface-inter'
 import './assets/global.scss'
 
 

@@ -32,6 +32,10 @@
     @apply bg-black/20;
 }
  
-.kamran{
-    @apply bg-blue-500 #{!important}
+.step-list{
+    li:last-child{
+        .v-line{
+            @apply hidden
+        }
+    }
 }

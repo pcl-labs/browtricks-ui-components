@@ -1,23 +1,58 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createWebHistory, createRouter } from 'vue-router';
+import Home from '@/views/HomeView.vue';
+import Customers from '@/views/CustomersView.vue';
+import CreateAccount from '@/components/CreateAccount.vue';
+import Login from '@/components/Login.vue';
+import ForgotPassword from '@/components/ForgotPassword.vue';
+import UserProfile from '@/components/UserProfile.vue';
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
+const routes = [{
+        path: '',
+        name: '',
+        component: Login,
+        meta: { title: 'BrowTricks | Login' },
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+        path: '/signup',
+        name: 'Create Account',
+        component: CreateAccount,
+        meta: { title: 'BrowTricks | Create Account' },
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login,
+        meta: { title: 'BrowTricks | Login' },
+    },
+    {
+        path: '/forgot-password',
+        name: 'forgot-password',
+        component: ForgotPassword,
+        meta: { title: 'BrowTricks | Forgot Password' },
+    },
+    {
+        path: '/home',
+        name: 'Home',
+        component: Home,
+        meta: { title: 'BrowTricks | Home' }
+    },
+    {
+        path: '/customers',
+        name: 'Customers',
+        component: Customers,
+        meta: { title: 'BrowTricks | Customers' }
+    },
+    {
+        path: '/user-profile',
+        name: 'UserProfile',
+        component: UserProfile,
+        meta: { title: 'BrowTricks | User' }
     }
-  ]
-})
+];
 
-export default router
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
+export default router;
