@@ -177,11 +177,11 @@ module.exports = {
         extend: {},
     },
     plugins: [
-        plugin(function ({ addBase, components, theme }) {
-            addBase({})
-        }),
        
+
+    //  require('@tailwindcss/forms'),
         require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/forms'),
         
     ],
 }

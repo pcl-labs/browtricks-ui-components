@@ -6,7 +6,7 @@
           to="/home"
           class="relative px-2 sm:px-0 flex h-16 items-center justify-between"
         >
-          <img src="../assets/logo.png" alt="image" class="mx-auto" />
+          <img :src="logo" alt="image" class="mx-auto" />
         </router-link>
       </div>
     </div>
@@ -148,11 +148,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "LoginAccount",
-  components: {},
-};
+<script setup>
+import logo from '../assets/logo-browtricks.png';
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

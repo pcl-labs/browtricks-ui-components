@@ -1,10 +1,13 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from '@/views/HomeView.vue';
 import Customers from '@/views/CustomersView.vue';
+import Login from '@/views/LoginView.vue';
+import UserProfile from '@/views/UserProfileView.vue';
+import Settings from '@/views/SettingsView.vue';
 import CreateAccount from '@/components/CreateAccount.vue';
-import Login from '@/components/Login.vue';
 import ForgotPassword from '@/components/ForgotPassword.vue';
-import UserProfile from '@/components/UserProfile.vue';
+import TopNavbar from '@/components/helpers/TopNavbar.vue';
+import SideBarNavigation from '@/components/helpers/SideBarNavigation.vue';
 
 const routes = [{
         path: '',
@@ -17,6 +20,18 @@ const routes = [{
         name: 'Create Account',
         component: CreateAccount,
         meta: { title: 'BrowTricks | Create Account' },
+    },
+    {
+        path: '/helpers/top-navbar',
+        name: 'Top Navbar',
+        component: TopNavbar,
+        meta: { title: 'BrowTricks | Top Navbar' },
+    },
+    {
+        path: '/helpers/sidebar-navigation',
+        name: 'Side Bar Navigation',
+        component: SideBarNavigation,
+        meta: { title: 'BrowTricks | Side Bar Navigation' },
     },
     {
         path: '/login',
@@ -47,6 +62,12 @@ const routes = [{
         name: 'UserProfile',
         component: UserProfile,
         meta: { title: 'BrowTricks | User' }
+    },
+    {
+        path: '/settings',
+        name: 'Settings',
+        component: Settings,
+        meta: { title: 'BrowTricks | Settings' }
     }
 ];
 

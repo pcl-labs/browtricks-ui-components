@@ -1,147 +1,8 @@
 <template>
-  <div class="relative flex flex-col min-h-screen">
-    <!--Top Navbar -->
-    <Disclosure as="nav" class="flex-shrink-0 bg-white py-1.5 shadow relative z-30" v-slot="{ open }">
-      <div class="mx-auto w-full max-w-8xl px-2 sm:px-4 lg:px-5 lg:pr-14">
-        <div class="relative px-2 sm:px-0 flex h-16 items-center justify-between">
-          <!-- Logo section -->
-          <div class="flex items-center relative gap-3">
-            <div class="flex items-center md:hidden">
-              <!-- Open menu button-->
-              <button type="button"  @click="showNavbar = !showNavbar"
-                class="inline-flex items-center justify-center rounded-md p-2 border border-grey-300 text-grey-800 hover:border-grey-800 hover:bg-grey-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                aria-controls="mobile-menu" aria-expanded="false">
-                <span class="sr-only">Open side menu</span>
-                  <Bars3Icon v-if="!showNavbar" class="block h-6 w-6" aria-hidden="true" />
-                 <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" /> 
-              </button>
-            </div>
-            <router-link to="/home" class="flex-shrink-0">
-              <img class="h-8 w-auto" :src="logo" alt="BrowTricks" />
-            </router-link>
-          </div>
-
-
-          <!-- Links section -->
-          <div class=" block ">
-            <div class="flex items-center justify-end">
-              <!-- Profile dropdown -->
-              <Menu as="div" class="relative ml-4 flex-shrink-0">
-                <div>
-                  <MenuButton as="button" class="flex items-center gap-3 group">
-                    <span class="sm:inline-flex gap-1 hidden "><span
-                        class="text-sm text-grey-800 font-semibold">{{ user.username }}</span>
-                      <ChevronDownIcon class="w-5" />
-                    </span>
-                    <span
-                      class="h-8 w-8 rounded-full flex justify-center items-center overflow-hidden ring-2 ring-transparent group-hover:ring-peach ring-offset-2 ring-offset-white">
-                      <img class="aspect-square" :src="user.profile" :alt="user.username" />
-                    </span>
-                  </MenuButton>
-                </div>
-                <transition enter-active-class="transition ease-out duration-100"
-                  enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100"
-                  leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100"
-                  leave-to-class="transform opacity-0 scale-95">
-                  <MenuItems
-                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div class="px-4 py-3" role="none">
-                      <p class="text-sm" role="none"><span class="block md:hidden text-sm text-grey-800 font-semibold">
-                          {{ user.username }}</span><span class="hidden md:block">Email</span></p>
-                      <p class="truncate text-sm font-medium text-grey-800" role="none">{{ user.email }}</p>
-                    </div>
-
-                    <div class="py-1" role="none">
-                      <MenuItem v-for="item in user.links" :key="item.name" v-slot="{ active }">
-                      <a :href="item.href"
-                        :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 text-left']">{{
-                            item.name
-                        }}</a>
-                      </MenuItem>
-                    </div>
-
-                    <div class="py-1" role="none">
-
-                      <button type="button"
-                        class="block px-4 py-2 hover:bg-peach text-sm text-grey-800 transition-all ease-in-out duration-300 w-full text-left font-bold"
-                        role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-
-                    </div>
-
-
-                  </MenuItems>
-                </transition>
-              </Menu>
-
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <DisclosurePanel class="lg:hidden">
-        <div class="border-t border-indigo-800 pt-4 pb-3">
-          <div class="space-y-1 px-2">
-            <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
-              class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100">
-              {{ item.name }}</DisclosureButton>
-          </div>
-        </div>
-      </DisclosurePanel>
-    </Disclosure>
-
-    <!-- 3 column wrapper -->
-    <div class="flex flex-1 relative ">
-      <!-- Left sidebar Account profile -->
-
-      <aside v-if="showNavbar" class="bg-white md:bg-grey-200 w-68 md:hidden absolute z-20 left-0 inset-y-0 shadow-md border-r bordr-grey-500
-      md:static md:shadow-none
-      ">
-        <nav class="flex-1 space-y-1 pr-2 py-4" aria-label="Sidebar">
-          <div class="space-y-2 relative">
-            <a v-for="item in sidebarNavigation" :key="item.name" :href="item.href" :class="
-              item.current
-                ? 'before:opacity-100 after:opacity-100'
-                : 'before:opacity-0 after:opacity-0'
-            "
-              class="group text-grey-800 flex items-center pr-2 pl-6 py-2.5 text-sm font-medium rounded-md transition-all ease-in-out duration-300 relative after:rounded-full after:w-1.5 after:bg-peach after:absolute after:inset-y-0 after:left-0 before:absolute before:bg-peach before:inset-0 before:rounded before:left-3 hover:before:opacity-100 hover:after:opacity-100 after:transition-all after:ease-in-out after:duration-300 before:transition-all before:ease-in-out before:duration-300"
-              :aria-current="item.current ? 'page' : undefined">
-              <span class="relative z-10 flex items-center">
-                <component :is="item.icon" class="mr-3 h-5 w-5 text-grey-900" aria-hidden="true" />
-                {{ item.name }}
-              </span>
-            </a>
-          </div>
-        </nav>
-      </aside>
-
-      <!-- Desktop Only -->
-      <aside class="bg-white hidden md:bg-grey-200 w-68 md:block absolute z-20 left-0 inset-y-0 shadow-md border-r bordr-grey-500
-      md:static md:shadow-none
-      ">
-        <nav class="flex-1 space-y-1 pr-2 py-4" aria-label="Sidebar">
-          <div class="space-y-2 relative">
-            <a v-for="item in sidebarNavigation" :key="item.name" :href="item.href" :class="
-              item.current
-                ? 'before:opacity-100 after:opacity-100'
-                : 'before:opacity-0 after:opacity-0'
-            "
-              class="group text-grey-800 flex items-center pr-2 pl-6 py-2.5 text-sm font-medium rounded-md transition-all ease-in-out duration-300 relative after:rounded-full after:w-1.5 after:bg-peach after:absolute after:inset-y-0 after:left-0 before:absolute before:bg-peach before:inset-0 before:rounded before:left-3 hover:before:opacity-100 hover:after:opacity-100 after:transition-all after:ease-in-out after:duration-300 before:transition-all before:ease-in-out before:duration-300"
-              :aria-current="item.current ? 'page' : undefined">
-              <span class="relative z-10 flex items-center">
-                <component :is="item.icon" class="mr-3 h-5 w-5 text-grey-900" aria-hidden="true" />
-                {{ item.name }}
-              </span>
-            </a>
-          </div>
-        </nav>
-      </aside>
-
+  <div class="user-profile-wrapper relative flex flex-col w-full">
       <!-- Projects List -->
       <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
-        <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+        <div class="mb-7 pb-10 space-y-5 border-b border-solid border-gray-300">
           <h2 class="flex-1 text-2.5xl font-semibold leading-none text-black pb-3">
             Chris Luke
           </h2>
@@ -162,78 +23,78 @@
             </div>
           </div>
         </div>
-        <div class="mb-7">
-          <h2 class="flex-1 text-2.5xl font-semibold leading-none text-black pb-3">
+        <div class="mb-7 space-y-7">
+          <h2 class="flex-1 text-2.5xl font-semibold leading-none text-black">
             Your media
           </h2>
-          <div class="coverflow-hidden rounded-xl bg-white shadow-3 border border-grey-300 divide-y divide-grey-300">
-<!-- Table we are still working on -->
-<div class="py-10 px-3 flex justify-center">
-<p>Table we are still working on</p>
-</div>
-
-
-
-
-            <div class="hidden sm:items-center p-4">
-              <div class="sm:flex-auto">
-                <h1 class="text-xl font-semibold text-gray-900">Users</h1>
-                <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their name,
-                  title, email and role.</p>
-              </div>
-              <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+          <div class="coverflow-hidden rounded-xl bg-white pb-3  border border-grey-300 divide-y divide-grey-300">
+   
+            
+            <div class="p-4 gap-2 md:gap-5 flex">
+              
+                <div class="w-full flex-1">
+                  <label for="search" class="sr-only">Search</label>
+                  <div class="relative">
+                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                      <MagnifyingGlassIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                    </div>
+                    <input id="search" name="search" class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer pl-10" placeholder="Search" type="search" />
+                  </div>
+                </div>
+              
+              <div class=" sm:flex-none flex">
                 <button type="button"
-                  class="flex w-full justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300">Add
-                  user</button>
+                  class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach">
+                  <svg
+                    class="icon relative top-0.5"
+                    style="width:24px;height:24px"
+                    viewBox="0 0 24 24"
+                  >
+                    <path :d="icons.sort" />
+                  </svg>
+                  Sort</button>
               </div>
             </div>
 
-
-
-            <div class="hidden flex-col">
-              <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="flex-col">
+              <div class="overflow-x-auto">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                  <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5">
-                    <table class="min-w-full divide-y divide-gray-300">
-                      <thead class="bg-gray-50">
+                  <div class="overflow-hidden  ">
+                    <table class="min-w-full border-0 border-collapse divide-y divide-gray-200">
+                      <thead class="">
                         <tr>
-                          <th scope="col"
-                            class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
-                          <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>
-                          <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
-                          <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Role</th>
-                          <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                            <span class="sr-only">Edit</span>
-                          </th>
+                          <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-grey-800 sm:pl-6">Media</th>
+                          <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-grey-800">Customer</th>
+                          <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-grey-800">Link</th>
+                          <th scope="col" class="px-3 py-3.5 pr-8 text-right text-sm font-semibold text-grey-800">Date added</th>
                         </tr>
                       </thead>
                       <tbody class="divide-y divide-gray-200 bg-white">
-                        <tr v-for="person in users" :key="person.email">
+                        <tr v-for="cust in customers" :key="cust.email">
                           <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                             <div class="flex items-center">
                               <div class="h-10 w-10 flex-shrink-0">
-                                <img class="h-10 w-10 rounded" :src="person.image" alt="" />
+                                <img class="h-10 w-10 rounded" :src="cust.image" alt="" />
                               </div>
                               <div class="ml-4">
-                                <div class="font-medium text-gray-900">{{ person.name }}</div>
-                                <div class="text-gray-500">{{ person.type }}</div>
+                                <div class="font-medium text-grey-800">{{ cust.name }}</div>
+                                <div class="text-gray-500">{{ cust.type }}</div>
                               </div>
                             </div>
                           </td>
-                          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                            <div class="text-gray-900">{{ person.title }}</div>
-                            <div class="text-gray-500">{{ person.department }}</div>
+                          <td class="whitespace-nowrap px-3 py-4 text-sm text-blue">
+                            {{ cust.name }} 
                           </td>
-                          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                            <span
-                              class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                          <td class=" text-center">
+                           <a href="javascript:void(0)" class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-sm font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2  ease-in-out duration-300 w-12 h-12">
+                            <svg class="w-5 h-5" viewBox="0 0 14 14" fill="none" stroke="currentColor">
+                                          <path d="M5.79297 7.60407C6.0521 7.95085 6.38271 8.23779 6.76237 8.44543C7.14202 8.65306 7.56185 8.77653 7.99337 8.80747C8.42489 8.83841 8.85801 8.77608 9.26335 8.62472C9.66869 8.47337 10.0368 8.23651 10.3426 7.93024L12.1528 6.11818C12.7024 5.54859 13.0065 4.7857 12.9996 3.99385C12.9928 3.20199 12.6755 2.44451 12.1161 1.88456C11.5567 1.32461 10.8 1.007 10.009 1.00011C9.2179 0.993233 8.45579 1.29764 7.88678 1.84777L6.84892 2.88065"  stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M8.20678 6.39594C7.94765 6.04915 7.61704 5.76221 7.23738 5.55457C6.85773 5.34694 6.4379 5.22347 6.00638 5.19253C5.57486 5.16159 5.14174 5.22392 4.7364 5.37528C4.33106 5.52664 3.96298 5.76349 3.65712 6.06977L1.84691 7.88182C1.29734 8.45142 0.99324 9.2143 1.00011 10.0062C1.00699 10.798 1.32428 11.5555 1.88366 12.1154C2.44304 12.6754 3.19975 12.993 3.9908 12.9999C4.78185 13.0068 5.54396 12.7024 6.11297 12.1522L7.14479 11.1194"  stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                           </a>
                           </td>
-                          <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ person.role }}</td>
-                          <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                            <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, {{
-                                person.name
-                            }}</span></a>
-                          </td>
+                          <td class="whitespace-nowrap px-3 py-4 pr-8 text-right text-sm text-gray-500">{{ cust.date_added }}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -244,11 +105,8 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
-
-
 
 <script>
 import FileSelect from './FileSelect.vue'
@@ -266,138 +124,56 @@ export default {
 }
 </script>
 
-
 <script setup>
+import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid';
 
-import { reactive, ref  } from "vue";
-
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-
-  MenuItem,
-  MenuItems,
-} from "@headlessui/vue";
-import {
-  CheckIcon,
-  HomeIcon,
-  Cog6ToothIcon,
-  Bars3Icon,
-  DocumentTextIcon,
-  ChevronDownIcon,
-  HeartIcon,
-  PhotoIcon,
-} from "@heroicons/vue/20/solid";
-import {
-  Bars3CenterLeftIcon,
-  ClockIcon,
-  CreditCardIcon,
-  DocumentChartBarIcon,
-  ScaleIcon,
-  UserGroupIcon,
-  XMarkIcon,
-} from "@heroicons/vue/24/outline";
-
-import logo from '@/assets/logo.png';
-
-const user = {
-  "username": "Chris Luke",
-  "email": "Sincere@april.biz",
-  "profile": "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80",
-  "links": [
-    { name: 'Login', href: '/login', current: true },
-    { name: 'Create Account', href: '/signup', current: false },
-    { name: 'Forgot Password', href: '/forgot-password', current: false },
-  ]
+const icons = {
+  "sort": "M5.29289 2.29289C5.47386 2.11193 5.72386 2 6 2C6.27614 2 6.52614 2.11193 6.70711 2.29289L9.70711 5.29289C10.0976 5.68342 10.0976 6.31658 9.70711 6.70711C9.31658 7.09763 8.68342 7.09763 8.29289 6.70711L7 5.41421V13C7 13.5523 6.55228 14 6 14C5.44772 14 5 13.5523 5 13V5.41421L3.70711 6.70711C3.31658 7.09763 2.68342 7.09763 2.29289 6.70711C1.90237 6.31658 1.90237 5.68342 2.29289 5.29289L5.29289 2.29289ZM13 7C13 6.448 13.448 6 14 6C14.553 6 15 6.448 15 7V14.585L16.293 13.293C16.683 12.902 17.317 12.902 17.707 13.293C17.903 13.488 18 13.744 18 14.001C18 14.256 17.903 14.512 17.707 14.707L14.707 17.707C14.527 17.888 14.277 18 14 18C13.724 18 13.474 17.888 13.293 17.707L10.293 14.707C10.098 14.512 10 14.256 10 14.001C10 13.744 10.098 13.488 10.293 13.293C10.684 12.902 11.316 12.902 11.707 13.293L13 14.585V7Z"
 }
-// const navigation = [
-//   { name: "Dashboard", href: "#", current: true },
-//   { name: "Domains", href: "#", current: false },
-// ];
-const sidebarNavigation = [
-  { name: "Home", href: "#", icon: HomeIcon, current: true },
-  { name: "Customers", href: "#", icon: HeartIcon, current: false },
-  { name: "PMU Forms", href: "#", icon: DocumentTextIcon, current: false },
-  { name: "Media", href: "#", icon: PhotoIcon, current: false },
-  { name: "Settings", href: "#", icon: Cog6ToothIcon, current: false },
-  // { name: 'Reports', href: '#', icon: DocumentChartBarIcon, current: false },
-];
 
-const setupCount = reactive(6);
-
-const showNavbar = ref(false);
-// Setup Guide data
-const customerSteps = reactive([
-  {
-    title: "Add customers",
-    answer:
-      "Streamline your contact book by saving before/after media and signed forms all within our single app.",
-    isExpanded: true,
-  },
-  {
-    title: "Create forms",
-    answer:
-      "Use our pre-built templates for quick onboarding, or create your own templates for use again and again! View signing status, and manage sms integrations.",
-    isExpanded: false,
-  },
-  {
-    title: "Connect social accounts",
-    answer:
-      "Import user generated content across social channels. Gain access to advanced analytics and performance reports by connecting your brand social accounts.",
-    isExpanded: false,
-  },
-  {
-    title: "Add before/after media",
-    answer:
-      "Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.",
-    isExpanded: false,
-  },
-  {
-    title: "Enable SMS sending",
-    answer:
-      "Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.",
-    isExpanded: false,
-  },
-]);
-
-
-const users = [
+const customers = [
   {
     name: 'Lindsay Walton',
+    url: '#',
     title: 'Front-end Developer',
-    department: 'Optimization',
     type: 'JPG',
-    role: 'Member',
+    date_added: 'Nov 28, 2022',
     image:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Lindsay Walton',
+    url: '#',
     title: 'Front-end Developer',
-    department: 'Optimization',
     type: 'JPG',
-    role: 'Member',
+    date_added: 'Nov 28, 2022',
     image:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Lindsay Walton',
+    url: '#',
     title: 'Front-end Developer',
-    department: 'Optimization',
     type: 'JPG',
-    role: 'Member',
+    date_added: 'Nov 28, 2022',
     image:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
   {
     name: 'Lindsay Walton',
+    url: '#',
     title: 'Front-end Developer',
-    department: 'Optimization',
     type: 'JPG',
-    role: 'Member',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
     image:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },

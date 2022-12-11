@@ -6,7 +6,7 @@
           to="/home"
           class="relative px-2 sm:px-0 flex h-16 items-center justify-between"
         >
-          <img src="../assets/logo.png" alt="image" class="mx-auto" />
+          <img :src="logo" alt="image" class="mx-auto" />
         </router-link>
       </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="bg-white p-5 rounded-lg sm:p-8 border border-grey-500 shadow-3 w-full">
           <form class="space-y-4" action="#" method="POST">
             <div class="flex flex-col space-y-3">
-              <h2 class="text-start text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-none ">Forgot Password <Icon source={List} /></h2>
+              <h2 class="text-start text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-none ">Forgot Password</h2>
             <p class="text-start text-base font-normal text-gray-500 leading-snug">Enter your registered email address to receive password reset instructions.</p>
             </div>
             <div class="flex flex-col space-y-4">
@@ -30,25 +30,20 @@
               <div class="flex items-center">
                 <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300">Reset password</button>
               </div>
-            </div>  
+            </div>
             </div>
           </form>
         </div>
         <div class="text-center w-full">
           <router-link to="/login" class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300">Back to login</router-link>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-import { List, Icon } from '@ownego/polaris-vue';
-export default {
-  name: 'ForgotPassword',
-  components: {
-  }
-}
+<script setup>
+import logo from '../assets/logo-browtricks.png';
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
