@@ -6,16 +6,7 @@
         <div class="relative px-2 sm:px-0 flex h-16 items-center justify-between">
           <!-- Logo section -->
           <div class="flex items-center relative gap-3">
-            <!-- <div class="flex items-center md:hidden">
-               Open menu button
-              <button type="button"  @click="showNavbar = !showNavbar"
-                class="inline-flex items-center justify-center rounded-md p-2 border border-grey-300 text-grey-800 hover:border-grey-800 hover:bg-grey-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                aria-controls="mobile-menu" aria-expanded="false">
-                <span class="sr-only">Open side menu</span>
-                  <Bars3Icon v-if="!showNavbar" class="block h-6 w-6" aria-hidden="true" />
-                 <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" /> 
-              </button>
-            </div> -->
+            
             <router-link to="/home" class="flex-shrink-0 home-logo pl-8 md:pl-0">
               <img class="h-8 w-auto pl-10 md:pl-0" :src="logo" alt="BrowTricks" />
             </router-link>
@@ -31,9 +22,9 @@
                   <MenuButton as="button" class="flex items-center gap-3 group">
                     <span class="sm:inline-flex gap-1 hidden ">
                       <span class="text-sm text-grey-800 font-semibold">
-                        <router-link :to="user.profile_url">{{user.username}}</router-link>
+                      {{user.username}} 
                       </span>
-                      <ChevronDownIcon class="w-5" />
+                      <ChevronDownIcon class="w-5" /> 
                     </span>
                     <span
                       class="h-8 w-8 rounded-full flex justify-center items-center overflow-hidden ring-2 ring-transparent group-hover:ring-peach ring-offset-2 ring-offset-white">
@@ -48,7 +39,7 @@
                   <MenuItems
                     class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="px-4 py-3" role="none">
-                      <p class="text-sm" role="none"><span class="block md:hidden text-sm text-grey-800 font-semibold"> {{user.username}}</span><span class="hidden md:block">Email</span></p>
+                      <p class="text-sm" role="none">  <router-link :to="user.profile_url"><span class="block md:hidden text-sm text-grey-800 font-semibold"> {{user.username}}</span></router-link><span class="hidden md:block">Email</span></p>
                       <p class="truncate text-sm font-medium text-grey-800" role="none">{{user.email}}</p>
                     </div>
 
@@ -86,11 +77,11 @@
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { ChevronDownIcon } from '@heroicons/vue/20/solid'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+
+ 
 import logo  from '@/assets/logo.png';
 import { reactive } from '@vue/reactivity';
-
+import ChevronDownIcon from '@/assets/icons/Chevrondown.vue';
 const props = defineProps({
   isLogin: Boolean,
 })
@@ -102,7 +93,8 @@ const user = {
   "profile": "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80",
   "profile_url": '/user-profile',
   "links": [
-    { name: 'Login', href: '/login', current: true },
+    { name: 'Profle', href: '/user-profile', current: true },
+    { name: 'Login', href: '/login', current: false },
     { name: 'Create Account', href: '/signup', current: false },
     { name: 'Forgot Password', href: '/forgot-password', current: false },
   ]

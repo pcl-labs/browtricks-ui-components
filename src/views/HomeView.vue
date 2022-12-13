@@ -15,8 +15,8 @@
 import { reactive, ref } from "vue";
 
 import HomeCustomer from '@/components/HomeCustomer.vue';
-import TopNavbar from "@/components/helpers/TopNavbar.vue";
-import SidebarNavigation from "@/components/helpers/SidebarNavigation.vue";
+import TopNavbar from "@/components/layout/TopNavbar.vue";
+import SidebarNavigation from "@/components/layout/SidebarNavigation.vue";
 
 const isLogin = reactive(true);
 

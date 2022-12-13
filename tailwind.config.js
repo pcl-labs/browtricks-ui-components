@@ -3,38 +3,38 @@ const plugin = require('tailwindcss/plugin');
 const colors = require('tailwindcss/colors');
 module.exports = {
 
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
 
     darkMode: [], // or 'media' or 'class'
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'Inter'", ...defaultTheme.fontFamily.sans], 
+                sans: ["'Inter'", ...defaultTheme.fontFamily.sans],
             },
 
-        colors: {
-              grey: { 
-                100:'#FAF9F9',
-                200:'#F7F6F6',
-                300:'#E8DEDE',
-                500:'#DDD3D3',
-                700:'#AFA2A2',
-                800:'#241717', // Black in Figma 
-                900:'#4D4646',
-              },
-              peach: {
-                DEFAULT: '#E9CFC4',
-                '2': '#EDE9E7',
-                '3': '#baa69d',
-                '4': '#8c7c76'
-              },
-              red: {
-                DEFAULT: '#D82C0D'
-              }, 
-              blue: {
-                DEFAULT: '#1062BF', 
-              }, 
-        },
+            colors: {
+                grey: {
+                    100: '#FAF9F9',
+                    200: '#F7F6F6',
+                    300: '#E8DEDE',
+                    500: '#DDD3D3',
+                    700: '#AFA2A2',
+                    800: '#241717', // Black in Figma 
+                    900: '#4D4646',
+                },
+                peach: {
+                    DEFAULT: '#E9CFC4',
+                    '2': '#EDE9E7',
+                    '3': '#baa69d',
+                    '4': '#8c7c76'
+                },
+                red: {
+                    DEFAULT: '#D82C0D'
+                },
+                blue: {
+                    DEFAULT: '#1062BF',
+                },
+            },
             spacing: {
                 '15': '3.75rem',
                 '18': '4.5rem',
@@ -74,16 +74,10 @@ module.exports = {
                 '4xl': '96rem',
             },
 
-            width:{
-                '3': '3px',
-                '68': '274px',
-                '119': '477px',
-                '22': '89px',
-            },
 
             minWidth: (theme) => ({
                 ...theme('spacing'),
-            }), 
+            }),
             maxWidth: (theme) => ({
                 ...theme('spacing'),
             }),
@@ -100,9 +94,9 @@ module.exports = {
                 '2': '0px 20px 41px rgba(0, 0, 0, 0.25)',
                 '3': '0px 1px 6px rgba(0, 0, 0, 0.1)',
             },
-            
 
-              
+
+
             fontSize: {
                 mi: '.65rem',
                 md: '.9375rem',
@@ -111,29 +105,21 @@ module.exports = {
                 '4.5xl': '2.5rem',
                 '5.5xl': '3.5rem',
                 '6.5xl': ['4rem', '1.10'],
-                '7.5xl': '5rem',
-                  '13'  : '13px',
-                  '15'  : '15px',
-                  '32'  : '32px',
+                '7.5xl': '5rem'
             },
 
 
-            borderWidth:{
-              3:'3px',
-              5:'5px',
-              6:'6px',
+            borderWidth: {
+                3: '3px',
+                5: '5px',
+                6: '6px',
             },
             ringWidth: {
-              3:'3px',
-              5:'5px',
-              6:'6px',
+                3: '3px',
+                5: '5px',
+                6: '6px'
             },
-
-
         },
-
-
-
 
 
         screens: {
@@ -177,11 +163,11 @@ module.exports = {
         extend: {},
     },
     plugins: [
-       
 
-    //  require('@tailwindcss/forms'),
+
+        //  require('@tailwindcss/forms'),
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/forms'),
-        
+
     ],
 }
