@@ -90,7 +90,7 @@
 
           <div class="">
             <img
-              src="../assets/setup-guide-thumb.svg"
+              src="@/assets/setup-guide-thumb.svg"
               alt="setup-thumb"
               class="hidden xl:block"
             />

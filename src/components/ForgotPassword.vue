@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-import logo from "../assets/logo-browtricks.png";
-import Button from './layout/Button.vue';
-import Input from './layout/Input.vue';
+import logo from "@/assets/logo-browtricks.png";
+import Button from '@/components/layout/Button.vue';
+import Input from '@/components/layout/Input.vue';
 </script>
