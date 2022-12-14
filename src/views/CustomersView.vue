@@ -4,7 +4,7 @@
       <TopNavbar :is-login="isLogin" />
       <!-- column wrapper -->
       <div class="flex flex-1 relative items-stretch">
-        <SideBarNavigation />
+        <SidebarNavigation />
         <h1>Customer page</h1>
       </div>
     </div>
@@ -12,12 +12,12 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 import HomeCustomer from '@/components/HomeCustomer.vue';
-import TopNavbar from "@/components/helpers/TopNavbar.vue";
-import SideBarNavigation from "@/components/helpers/SideBarNavigation.vue";
+import TopNavbar from "@/components/layout/TopNavbar.vue";
+import SidebarNavigation from "@/components/layout/SidebarNavigation.vue";
 
-const isLogin = ref(true);
+const isLogin = reactive(true);
 
 </script>
