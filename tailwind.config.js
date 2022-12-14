@@ -9,7 +9,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'Inter'", ...defaultTheme.fontFamily.sans], 
+                sans: ["'Inter var'", ...defaultTheme.fontFamily.sans], 
             },
 
         colors: {
@@ -74,12 +74,6 @@ module.exports = {
                 '4xl': '96rem',
             },
 
-            width:{
-                '3': '3px',
-                '68': '274px',
-                '119': '477px',
-                '22': '89px',
-            },
 
             minWidth: (theme) => ({
                 ...theme('spacing'),
@@ -96,9 +90,9 @@ module.exports = {
 
 
             boxShadow: {
-                '1': '0px 9px 44px rgba(0, 0, 0, 0.06)',
-                '2': '0px 20px 41px rgba(0, 0, 0, 0.25)',
-                '3': '0px 1px 6px rgba(0, 0, 0, 0.1)',
+                '1': '0px 0.563rem 2.75rem rgba(0, 0, 0, 0.06)',
+                '2': '0px 1.25rem  1.25rem rgba(0, 0, 0, 0.25)',
+                '3': '0px 1.25rem  0.375rem rgba(0, 0, 0, 0.1)',  
             },
             
 
@@ -111,29 +105,21 @@ module.exports = {
                 '4.5xl': '2.5rem',
                 '5.5xl': '3.5rem',
                 '6.5xl': ['4rem', '1.10'],
-                '7.5xl': '5rem',
-                  '13'  : '13px',
-                  '15'  : '15px',
-                  '32'  : '32px',
+                '7.5xl': '5rem'
             },
 
 
             borderWidth:{
-              3:'3px',
-              5:'5px',
-              6:'6px',
+              3:'0.188rem',
+              5:'0.313rem',
+              6:'0.375',
             },
             ringWidth: {
-              3:'3px',
-              5:'5px',
-              6:'6px',
+             3:'0.188rem',
+             5:'0.313rem',
+             6:'0.375',
             },
-
-
         },
-
-
-
 
 
         screens: {
