@@ -1,7 +1,5 @@
 <template>
-  
-    <Login />
-  
+  <Login />
 </template>
 
 <script setup>

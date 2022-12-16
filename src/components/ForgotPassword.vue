@@ -14,8 +14,8 @@
       <div
         class="flex flex-col justify-center items-center max-w-sm mx-auto w-full xs:px-3 sm:px-4 gap-6"
       >
-      <div
-          class="bg-white p-5 xs:rounded-lg sm:p-8  border-y xs:border border-grey-500 shadow-3 w-full"
+        <div
+          class="bg-white p-5 xs:rounded-lg sm:p-8 border-y xs:border border-grey-500 shadow-3 w-full"
         >
           <form class="space-y-4" action="#" method="POST">
             <div class="flex flex-col space-y-3">
@@ -32,17 +32,20 @@
               </p>
             </div>
             <div class="flex flex-col space-y-4">
+              <Input
+                id="email"
+                type="email"
+                label-text="Email"
+                v-model="email"
+                :on-change="handleInput"
+                autocomplete="Email"
+              />
 
-
-              <Input id="email" type="email" label-text="Email" v-model="email" :on-change="handleInput" autocomplete="Email"/>
-
-
-            
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-
-                  <Button type="submit" :on-click="consoleClick"> Reset password</Button>
- 
+                  <Button type="submit" :on-click="consoleClick">
+                    Reset password</Button
+                  >
                 </div>
               </div>
             </div>
@@ -61,7 +64,7 @@
 </template>
 
 <script setup>
-import logo from "@/assets/logo-browtricks.png";
+import logo from '@/assets/logo-browtricks.png';
 import Button from '@/components/layout/Button.vue';
 import Input from '@/components/layout/Input.vue';
 </script>

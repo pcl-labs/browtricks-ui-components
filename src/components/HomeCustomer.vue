@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="xl:flex px-4 py-10 md:px-7">   
+        <div class="xl:flex px-4 py-10 md:px-7">
           <div class="flex-1">
             <ul role="list" class="md:pr-5 max-w-md overflow-hidden step-list">
               <!-- customers steps -->
@@ -102,54 +102,39 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
-import CheckIcon from "@/assets/icons/CheckIcon.vue";
-
-const user = {
-  username: "Chris Luke",
-  email: "Sincere@april.biz",
-  profile:
-    "https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=80",
-  profile_url: "/user-profile",
-  links: [
-    { name: "Login", href: "/login", current: true },
-    { name: "Create Account", href: "/signup", current: false },
-    { name: "Forgot Password", href: "/forgot-password", current: false },
-  ],
-};
-
-const setupCount = reactive(6);
+import { reactive } from 'vue';
+import CheckIcon from '@/assets/icons/CheckIcon.vue';
 
 // Setup Guide data
 const customerSteps = reactive([
   {
-    title: "Add customers",
+    title: 'Add customers',
     answer:
-      "Streamline your contact book by saving before/after media and signed forms all within our single app.",
+      'Streamline your contact book by saving before/after media and signed forms all within our single app.',
     isExpanded: true,
   },
   {
-    title: "Create forms",
+    title: 'Create forms',
     answer:
-      "Use our pre-built templates for quick onboarding, or create your own templates for use again and again! View signing status, and manage sms integrations.",
+      'Use our pre-built templates for quick onboarding, or create your own templates for use again and again! View signing status, and manage sms integrations.',
     isExpanded: false,
   },
   {
-    title: "Connect social accounts",
+    title: 'Connect social accounts',
     answer:
-      "Import user generated content across social channels. Gain access to advanced analytics and performance reports by connecting your brand social accounts.",
+      'Import user generated content across social channels. Gain access to advanced analytics and performance reports by connecting your brand social accounts.',
     isExpanded: false,
   },
   {
-    title: "Add before/after media",
+    title: 'Add before/after media',
     answer:
-      "Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.",
+      'Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.',
     isExpanded: false,
   },
   {
-    title: "Enable SMS sending",
+    title: 'Enable SMS sending',
     answer:
-      "Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.",
+      'Save customer content to your account. Build relationships by storing notes, images, and more directly to their profile.',
     isExpanded: false,
   },
 ]);

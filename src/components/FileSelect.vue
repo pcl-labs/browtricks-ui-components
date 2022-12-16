@@ -24,7 +24,7 @@ export default {
 
   methods: {
     handleFileChange(e) {
-      this.$emit("input", e.target.files[0]);
+      this.$emit('input', e.target.files[0]);
     },
   },
 };
