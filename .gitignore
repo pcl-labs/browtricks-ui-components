@@ -13,7 +13,7 @@ backup
 dist
 dist-ssr
 coverage
-# *.local
+*.local
 
 /cypress/videos/
 /cypress/screenshots/

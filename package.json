@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "eslint": "^8.29.0",
     "pinia": "^2.0.26",
+    "prettier": "^2.8.1",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
