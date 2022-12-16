@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
   <svg fill="none" viewBox="0 0 16 16">
     <path
@@ -16,24 +15,4 @@
       stroke-linejoin="round"
     />
   </svg>
-</template>
-=======
-<template>
-  <svg fill="none" viewBox="0 0 16 16">
-    <path
-      d="M0.667969 7.99935C0.667969 7.99935 3.33464 2.66602 8.0013 2.66602C12.668 2.66602 15.3346 7.99935 15.3346 7.99935C15.3346 7.99935 12.668 13.3327 8.0013 13.3327C3.33464 13.3327 0.667969 7.99935 0.667969 7.99935Z"
-      stroke="currentColor"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
-      stroke="currentColor"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>
-</template>
->>>>>>> 9c9cf869ca470f96b3655c35b78cd01f0f344dd7
+</template> 
