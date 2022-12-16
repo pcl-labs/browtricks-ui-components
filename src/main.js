@@ -1,15 +1,13 @@
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router' 
 // import 'typeface-inter'
 import './assets/global.css'
 
-const app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
+const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)

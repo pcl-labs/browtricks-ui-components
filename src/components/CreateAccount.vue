@@ -180,14 +180,14 @@
 
 <script setup>
 import { reactive, ref } from "vue";
-import logo from "../assets/logo-browtricks.png";
+import logo from "@/assets/logo-browtricks.png";
 import AppleIcon from "@/assets/icons/Apple.vue";
 import GoogleIcon from "@/assets/icons/Google.vue";
 import FacebookIcon from "@/assets/icons/Facebook.vue";
 import Eye from "@/assets/icons/Eye.vue";
 import EyeOff from "@/assets/icons/EyeOff.vue";
-import Button from "./layout/Button.vue";
-import Input from "./layout/Input.vue";
+import Button from "@/components/layout/Button.vue";
+import Input from "@/components/layout/Input.vue";
 
 const showPassword = ref(false);
 const showPasswordRptr = ref(false);
