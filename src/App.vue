@@ -1,85 +1,61 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper text-tth-500 kamran">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <router-view></router-view>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<script>
+export default {
+  name: 'App',
+  components: {},
+  data() {
+    return {
+      readActivated: false,
+      posts: [
+        {
+          title: 'title 1',
+          desc: '<strong>Lorem ipsum</strong>, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta.',
+        },
+        {
+          title: 'title 2',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta. Cumque ullam modi optio quibusdam dignissimos unde, animi officiis.',
+        },
+        {
+          title: 'title 3',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta. Cumque ullam modi optio quibusdam dignissimos unde, animi officiis.',
+        },
+        {
+          title: 'title 4',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta.',
+        },
+        {
+          title: 'title 5',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta. Cumque ullam modi optio quibusdam dignissimos unde, animi officiis.',
+        },
+        {
+          title: 'title 6',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta officiis.',
+        },
+        {
+          title: 'title 7',
+          desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci molestias quisquam culpa, iste pariatur ullam ab, accusamus id deserunt expedita dicta. Cumque ullam modi optio quibusdam dignissimos unde, animi officiis.',
+        },
+      ],
+      filteredPosts: '',
+    };
+  },
+  methods: {
+    countWords(str) {
+      return str.trim().split(/\s+/).length;
+    },
+    loadData() {
+      this.filteredPosts = this.posts;
+      for (const post of this.filteredPosts) {
+        post.readActivated = false;
+      }
+      return this.filteredPosts;
+    },
+  },
+  mounted() {
+    this.loadData();
+  },
+};
+</script>
