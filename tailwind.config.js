@@ -23,10 +23,10 @@ module.exports = {
           900: '#4D4646',
         },
         peach: {
-          DEFAULT: '#E9CFC4',
-          2: '#EDE9E7',
-          3: '#baa69d',
-          4: '#8c7c76',
+          200: '#EDE9E7',
+          300: '#baa69d',
+          500: 'E9CFC4',
+          700: '#8c7c76',
         },
         red: {
           DEFAULT: '#D82C0D',
