@@ -122,6 +122,7 @@
                 v-model="password"
                 :on-change="handleInput"
                 autocomplete="Password"
+                inputClasses="pr-10"
               />
               <button
                 type="button"
@@ -140,6 +141,7 @@
                 v-model="email"
                 :on-change="handleInput"
                 autocomplete="password"
+                inputClasses="pr-10"
               />
               <button
                 type="button"
@@ -156,7 +158,7 @@
             >
               <div class="flex items-center w-full xs:w-auto">
                 <!-- This is for emit method -->
-                <Button type="submit" @emitclick="consoleClick">
+                <Button type="submit" @emitclick="consoleClick" :btn-primary="true">
                   Let's get started</Button
                 >
               </div>
@@ -179,14 +181,14 @@
 
 <script setup>
 import { ref } from 'vue';
-import logo from '../assets/logo-browtricks.png';
+import logo from '@/assets/logo-browtricks.png';
 import AppleIcon from '@/assets/icons/Apple.vue';
 import GoogleIcon from '@/assets/icons/Google.vue';
 import FacebookIcon from '@/assets/icons/Facebook.vue';
 import Eye from '@/assets/icons/Eye.vue';
 import EyeOff from '@/assets/icons/EyeOff.vue';
-import Button from './layout/Button.vue';
-import Input from './layout/Input.vue';
+import Button from '@/components/layout/Button.vue';
+import Input from '@/components/layout/Input.vue';
 
 const showPassword = ref(false);
 const showPasswordRptr = ref(false);

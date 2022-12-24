@@ -1,0 +1,227 @@
+<template>
+  <div class="relative flex flex-col min-h-screen w-full">
+    <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
+      <div class="flex flex-wrap items-center justify-between mb-7">
+        <div class="sm:flex-auto">
+          <h2 class="text-2xl font-bold text-grey-800 leading-none">
+            Customers List
+          </h2>
+        </div>
+        <div class="sm:mt-4 md:mt-0  sm:flex-none">
+          <Button :btn-primary="true" 
+            @click="this.$router.push({ name: 'add-customer' })"
+            class="sm:w-38 sm:mr-auto"
+            >Add customer</Button
+          >
+        </div>
+      </div>
+      <div class="overflow-hidden rounded-lg bg-white border border-grey-300 shadow-3">
+        <div class="p-4 pb-0 gap-2 md:gap-5 flex">
+          <div class="flex flex-1 gap-2 md:gap-5">
+            <div class="relative flex-1">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <MagnifyingGlassIcon
+                  class="h-4 w-4 text-grey-900 mt-1"
+                  aria-hidden="true"
+                />
+              </div>
+              <Input
+                id="search"
+                type="search"
+                label-text=""
+                name="search"
+                v-model="password"
+                placeholder="Search forms"
+                inputClasses="pl-10 border-peach"
+              />
+            </div>
+
+            <div class="sm:flex-none flex relative">          
+
+              <Menu as="div" class="relative inline-block text-left">
+              
+                <MenuButton 
+                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach mt-1"
+                :class="[
+                  active
+                    ? 'bg-peach border-peach'
+                    : 'border-grey-700 bg-white',
+                  'block px-4 py-3 text-sm text-left ease-in-out duration-300 w-full',
+                ]"
+              >
+                <ShortIcon class="w-5 h-4 mr-2" /> <span>Short</span>
+              </MenuButton>
+                
+
+                <transition
+                  enter-active-class="transition duration-100 ease-out"
+                  enter-from-class="transform scale-95 opacity-0"
+                  enter-to-class="transform scale-100 opacity-100"
+                  leave-active-class="transition duration-75 ease-in"
+                  leave-from-class="transform scale-100 opacity-100"
+                  leave-to-class="transform scale-95 opacity-0"
+                >
+                  <MenuItems
+                    class="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-3 ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  >
+                    <div class="py-1">
+                      <MenuItem v-slot="{ active }">
+                        <button
+                          :class="[
+                            active
+                              ? 'bg-gray-100 text-gray-900'
+                              : 'text-gray-700',
+                            'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                          ]"
+                        >
+                          A-Z
+                        </button>
+                      </MenuItem>
+                      <MenuItem v-slot="{ active }">
+                        <button
+                          :class="[
+                            active
+                              ? 'bg-gray-100 text-gray-900'
+                              : 'text-gray-700',
+                            'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                          ]"
+                        >
+                          Z-A
+                        </button>
+                      </MenuItem>
+                    </div>
+                  </MenuItems>
+                </transition>
+              </Menu>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-col">
+          <div class="overflow-x-auto">
+            <div class="inline-block min-w-full align-middle md:px-0 lg:px-0">
+              <div class="overflow-hidden">
+                <table
+                  class="min-w-full border-0 border-collapse divide-y divide-gray-200"
+                >
+                  <thead class="">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="py-3.5 w-1/3 pl-4 pr-3 text-left text-sm font-bold text-grey-800 sm:pl-6"
+                      >
+                        Customer name
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-3 w-1/3 py-3.5 text-left text-sm font-bold text-grey-800"
+                      >
+                        Phone
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-3 w-1/3 py-3.5 text-left text-sm font-bold text-grey-800"
+                      >
+                        Email
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200 bg-white">
+                    <tr
+                      v-for="cust in customers"
+                      :key="cust.email"
+                      class="odd:bg-white even:bg-grey-100"
+                    >
+                      <td
+                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium"
+                      >
+                        {{ cust.name }}
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-3 py-4 text-sm font-medium"
+                      >
+                        {{ cust.phone }}
+                      </td>
+                      <td
+                        class="whitespace-nowrap px-3 py-4 text-sm font-medium"
+                      >
+                        {{ cust.email }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <nav
+            class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+            aria-label="Pagination"
+          >
+            <div class="flex flex-1 justify-start items-center gap-2">
+              <a
+                href="#"
+                class="relative inline-flex items-center rounded-l border border-grey-500 bg-white px-2.5 py-2 text-sm font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
+              >
+                <AngleLeft class="w-1.5" />
+              </a>
+              <p class="text-sm text-grey-800 font-medium">
+                <!-- space -->
+                <span class="">10</span>
+                <!-- space -->
+                of
+                <!-- space -->
+                <span class="">174</span>
+                results
+              </p>
+              <a
+                href="#"
+                class="relative inline-flex items-center rounded-r border border-grey-500 bg-white px-2.5 py-2 text-sm font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
+                ><AngleRight class="w-1.5"
+              /></a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import AngleRight from '@/assets/icons/AngleRight.vue';
+import AngleLeft from '@/assets/icons/AngleLeft.vue';
+import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
+import ShortIcon from '@/assets/icons/ShortIcon.vue';
+import Button from '@/components/layout/Button.vue';
+import Input from '@/components/layout/Input.vue';
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
+const customers = [
+  {
+    name: 'Lindsay Walton',
+    phone: '(468) 845-6839',
+    email: 'carlasiphron@gmail.com',
+  },
+  {
+    name: 'Lindsay Walton',
+    phone: '(468) 845-6839',
+    email: 'carlasiphron@gmail.com',
+  },
+  {
+    name: 'Lindsay Walton',
+    phone: '(468) 845-6839',
+    email: 'carlasiphron@gmail.com',
+  },
+  {
+    name: 'Lindsay Walton',
+    phone: '(468) 845-6839',
+    email: 'carlasiphron@gmail.com',
+  },
+  {
+    name: 'Lindsay Walton',
+    phone: '(468) 845-6839',
+    email: 'carlasiphron@gmail.com',
+  },
+];
+</script>

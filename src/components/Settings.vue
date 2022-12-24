@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 relative flex flex-col w-full">
+  <div class="relative flex flex-col min-h-screen w-full">
     <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
       <div
         class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-gray-300"
@@ -21,7 +21,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="shadow-3 rounded-lg overflow-hidden ">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="space-y-3">
                       <h6
@@ -44,36 +44,16 @@
                       </div>
                     </div>
                     <div class="">
-                      <label
-                        for="team-name"
-                        class="block text-sm font-medium text-grey-800"
-                        >Team name</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="text"
-                          name="team-name"
-                          id="team-name"
-                          class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                          placeholder="koko team"
-                          required
-                        />
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block"
-                        id="team-description"
-                      >
-                        Please choose your team name
-                      </p>
+                      <Input id="team-name" type="text" label-text="Team name" name="team-name" 
+                          placeholder="Team name" inputClasses=" " />
+                       
                     </div>
-                    <div class="flex items-center mt-3">
-                      <button
-                        type="submit"
-                        class="ml-auto flex justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300"
-                      >
-                        Save
-                      </button>
+
+                    <div class="flex items-center justify-end mt-3">                       
+                      <Button @click="editNoteDailog = false" type="submit" class="w-auto sm:px-6"  :btn-primary="true">Save</Button>
                     </div>
+
+                     
                   </div>
                 </div>
               </form>
@@ -82,7 +62,7 @@
         </div>
       </div>
       <div class="mb-7 pb-7 border-b border-solid border-gray-300">
-        <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
+        <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
               <div class="px-4 sm:px-0">
@@ -94,109 +74,36 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="relative">
-                      <label
-                        for="team-name"
-                        class="block text-sm font-medium text-grey-800"
-                        >Address</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="text"
-                          name="team-name"
-                          id="team-name"
-                          class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                          placeholder="Address"
-                          required
-                        />
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block"
-                        id="team-description"
-                      >
-                        Please fill your address
-                      </p>
+                      <Input id="Address" type="text" label-text="Address" name="Address" 
+                          placeholder="Address" inputClasses=" " />
+                      
                     </div>
 
                     <div class="relative">
-                      <label
-                        for="team-name"
-                        class="block text-sm font-medium text-grey-800"
-                        >City</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="text"
-                          name="team-name"
-                          id="team-name"
-                          class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                          placeholder="City"
-                          required
-                        />
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block"
-                        id="team-description"
-                      >
-                        City
-                      </p>
+                      <Input id="city" type="text" label-text="City" name="city" 
+                          placeholder="City" inputClasses=" " />
+                      
                     </div>
 
                     <div class="relative">
-                      <label
-                        for="team-name"
-                        class="block text-sm font-medium text-grey-800"
-                        >Country</label
-                      >
-                      <div class="mt-1">
-                        <select
-                          name="team-name"
-                          id="team-name"
-                          class="block w-full rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                        >
-                          <option>United States</option>
-                        </select>
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block"
-                        id="team-description"
-                      >
-                        City
-                      </p>
+                      <Input id="cuntry" type="text" label-text="Country" name="country" 
+                          placeholder="Country" inputClasses=" " />
+                     
                     </div>
                     <div class="relative">
-                      <label
-                        for="team-name"
-                        class="block text-sm font-medium text-grey-800"
-                        >ZIP/Postcode</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="text"
-                          name="team-name"
-                          id="team-name"
-                          class="block appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer w-40"
-                          required
-                        />
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block"
-                        id="team-description"
-                      >
-                        City
-                      </p>
+                      <Input id="postcode" type="text" label-text="ZIP/Postcode" name="postcode" 
+                          placeholder="ZIP/Postcode" inputClasses="w-40" />
+                       
                     </div>
 
-                    <div class="flex items-center mt-3">
-                      <button
-                        type="submit"
-                        class="ml-auto flex justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300"
-                      >
-                        Save
-                      </button>
+
+                    <div class="flex items-center justify-end mt-3">                       
+                      <Button @click="editNoteDailog = false" type="submit" class="w-auto sm:px-6"  :btn-primary="true">Save</Button>
                     </div>
+ 
                   </div>
                 </div>
               </form>
@@ -205,7 +112,7 @@
         </div>
       </div>
       <div class="mb-7 pb-7 border-b border-solid border-gray-300">
-        <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
+        <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
               <div class="px-4 sm:px-0">
@@ -220,30 +127,12 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="relative">
-                      <label
-                        for="Email"
-                        class="block text-sm font-medium text-grey-800"
-                        >Email</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="Email"
-                          name="Email"
-                          id="Email"
-                          class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                          required
-                        />
-                      </div>
-                      <p
-                        class="mt-2 text-xs text-gray-900 invalid:text-red peer-required:text-red"
-                        id="team-description"
-                      >
-                        Please provide the email address of the person you would
-                        like to add to this team.
-                      </p>
+                      <Input id="email" type="email" label-text="Email" name="email" 
+                          placeholder="Enter email" inputClasses=" " />
+                      
                     </div>
                     <h3 class="text-grey-800 font-bold pt-4">Role</h3>
                     <div class="relative flex gap-3 items-start">
@@ -277,13 +166,8 @@
                       </label>
                     </div>
 
-                    <div class="flex items-center mt-3">
-                      <button
-                        type="submit"
-                        class="ml-auto flex justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300"
-                      >
-                        Add
-                      </button>
+                    <div class="flex items-center justify-end mt-3">                       
+                      <Button @click="editNoteDailog = false" type="submit" class="w-auto sm:px-6"  :btn-primary="true">Add</Button>
                     </div>
                   </div>
                 </div>
@@ -294,7 +178,7 @@
       </div>
 
       <div class="mb-7 pb-7 border-b border-solid border-gray-300">
-        <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
+        <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
               <div class="px-4 sm:px-0">
@@ -308,7 +192,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="space-y-2">
                       <h3 class="text-sm font-bold text-grey-800">
@@ -340,12 +224,10 @@
                             </div>
                           </td>
                           <td class="text-right">
-                            <button
-                              type="button"
-                              class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach"
-                            >
-                              Connect
-                            </button>
+                           
+
+                            <Button class="w-auto sm:px-4" type="button" :btn-outline="true" :btn-primary="false">Connect</Button>
+
                           </td>
                         </tr>
 
@@ -366,12 +248,8 @@
                             </div>
                           </td>
                           <td class="text-right">
-                            <button
-                              type="button"
-                              class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach"
-                            >
-                              Connect
-                            </button>
+                            <Button class="w-auto sm:px-4" type="button" :btn-outline="true" :btn-primary="false">Connect</Button>
+
                           </td>
                         </tr>
 
@@ -413,12 +291,8 @@
                             </div>
                           </td>
                           <td class="text-right">
-                            <button
-                              type="button"
-                              class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach"
-                            >
-                              Connect
-                            </button>
+                            <Button class="w-auto sm:px-4" type="button" :btn-outline="true" :btn-primary="false">Connect</Button>
+
                           </td>
                         </tr>
 
@@ -437,12 +311,9 @@
                             </div>
                           </td>
                           <td class="text-right">
-                            <button
-                              type="button"
-                              class="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach"
-                            >
-                              Connect
-                            </button>
+                            <Button class="w-auto sm:px-4" type="button" :btn-outline="true" :btn-primary="false">Connect</Button>
+
+                            
                           </td>
                         </tr>
                       </table>
@@ -471,30 +342,12 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="relative">
-                      <label
-                        for="name"
-                        class="block text-sm font-medium text-grey-800"
-                        >Name</label
-                      >
-                      <div class="mt-1">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer"
-                          required
-                          placeholder="4356789765234"
-                        />
-                      </div>
-                      <p
-                        class="hidden mt-2 text-xs text-red peer-required:block peer-invalid:block"
-                        id="team-description"
-                      >
-                        4356789765234
-                      </p>
+                      <Input id="number" type="text" label-text="Name" name="search" 
+                          placeholder="4356789765234" inputClasses=" " />
+                       
                     </div>
                     <div class="space-y-4">
                       <div class="relative flex gap-3 items-start">
@@ -550,13 +403,9 @@
                         </label>
                       </div>
                     </div>
-                    <div class="flex items-center mt-3">
-                      <button
-                        type="submit"
-                        class="ml-auto flex justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-base font-semibold text-black shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300"
-                      >
-                        Create
-                      </button>
+                    <div class="flex justify-end items-center mt-3">
+                     
+                      <Button @click="editNoteDailog = false" type="submit" class="w-auto sm:px-6"  :btn-primary="true">Create</Button>
                     </div>
                   </div>
                 </div>
@@ -567,7 +416,7 @@
       </div>
 
       <div class="mb-7 pb-7">
-        <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
+        <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
               <div class="px-4 sm:px-0">
@@ -581,7 +430,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="shadow sm:overflow-hidden sm:rounded-md">
+                <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="space-y-2">
                       <p class="text-md text-grey-900">
@@ -592,13 +441,8 @@
                       </p>
                     </div>
 
-                    <div class="flex items-center mt-3 justify-start">
-                      <button
-                        type="button"
-                        class="inline-flex items-center justify-center rounded-md border border-red bg-white px-4 w-36 text-center py-2 text-base font-medium text-red shadow-sm hover:bg-red hover:text-white focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-2 ease-in-out duration-300"
-                      >
-                        Delete Team
-                      </button>
+                    <div class="flex items-center mt-3 justify-start">                       
+                      <Button @click="deleteCustomerDailog = true" :btn-danger="true" :btn-primary="false" class="bg-transparent sm:px-6"> Delete Team</Button>
                     </div>
                   </div>
                 </div>
@@ -617,7 +461,8 @@ import FacebookLogo from '@/assets/icons/FacebookLogo.vue';
 import TwitterLogo from '@/assets/icons/TwitterLogo.vue';
 import InstagramLogo from '@/assets/icons/InstagramLogo.vue';
 import TiktokLogo from '@/assets/icons/TiktokLogo.vue';
-
+import Button from '@/components/layout/Button.vue';
+import Input from '@/components/layout/Input.vue';
 const roles = [
   {
     id: '1',

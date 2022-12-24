@@ -35,7 +35,7 @@
                       <span class="text-sm text-grey-800 font-semibold">
                         {{ user.username }}
                       </span>
-                      <ChevronDownIcon class="w-5" />
+                      <caretDown class="w-3 text-grey-800/50" />
                     </span>
                     <span
                       class="h-8 w-8 rounded-full flex justify-center items-center overflow-hidden ring-2 ring-transparent group-hover:ring-peach ring-offset-2 ring-offset-white"
@@ -97,7 +97,7 @@
                     <div class="py-1" role="none">
                       <button
                         type="button"
-                        class="block px-4 py-2 hover:bg-peach text-sm text-grey-800 transition-all ease-in-out duration-300 w-full text-left font-bold"
+                        class="block px-4 py-2 hover:bg-peach text-sm text-grey-900 transition-all ease-in-out duration-300 w-full text-left font-semibold"
                         role="menuitem"
                         tabindex="-1"
                         id="menu-item-3"
@@ -144,7 +144,7 @@ import {
 } from '@headlessui/vue';
 
 import logo from '@/assets/logo.png';
-import ChevronDownIcon from '@/assets/icons/Chevrondown.vue';
+import caretDown from '@/assets/icons/caretDown.vue'; 
 defineProps({
   isLogin: Boolean,
 });
