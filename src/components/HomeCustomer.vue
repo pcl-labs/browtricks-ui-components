@@ -75,7 +75,7 @@
                       class="space-y-5"
                     >
                       <p class="text-md text-grey-800">{{ step.answer }}</p>
-                      <Button @emitclick="consoleClick" class="sm:min-w-40 mt-4" :btn-primary="true">Add customer</Button>
+                      <Button @click="consoleClick" class="sm:min-w-40 mt-4" :btn-primary="true">Add customer</Button>
 
                     </div>
                   </div>

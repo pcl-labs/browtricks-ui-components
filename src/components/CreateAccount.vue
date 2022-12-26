@@ -22,15 +22,15 @@
         <div
           class="flex flex-col xs:grid xs:grid-cols-3 gap-2 w-full max-w-64 xs:max-w-none"
         >
-          <Button type="button" :on-click="consoleClick" class="flex-row"
+          <Button type="button" @click="consoleClick" class="flex-row"
             ><AppleIcon class="w-5" /><span>Apple</span></Button
           >
 
-          <Button type="button" :on-click="consoleClick" class="flex-row">
+          <Button type="button" @click="consoleClick" class="flex-row">
             <GoogleIcon class="w-5" /><span>Google</span></Button
           >
 
-          <Button type="button" :on-click="consoleClick" class="flex-row">
+          <Button type="button" @click="consoleClick" class="flex-row">
             <FacebookIcon class="w-5" /><span>Facebook</span></Button
           >
         </div>
@@ -158,7 +158,7 @@
             >
               <div class="flex items-center w-full xs:w-auto">
                 <!-- This is for emit method -->
-                <Button type="submit" @emitclick="consoleClick" :btn-primary="true">
+                <Button type="submit" @click="consoleClick" :btn-primary="true">
                   Let's get started</Button
                 >
               </div>

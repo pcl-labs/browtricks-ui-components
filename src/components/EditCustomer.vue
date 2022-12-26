@@ -23,7 +23,7 @@
                   </div>
 
                   <div class="mt-7">
-                    <Button @emitclick="consoleClick" :btn-primary="true">Add Media</Button>
+                    <Button @click="consoleClick" :btn-primary="true">Add Media</Button>
 
                   </div>
                 </div>
@@ -36,7 +36,7 @@
                       PMU Forms
                     </h4>
 
-                    <Button @emitclick="consoleClick" :btn-no-border="true" :btn-primary="false"
+                    <Button @click="consoleClick" :btn-no-border="true" :btn-primary="false"
                       class=" text-blue hover:text-grey-800 ml-auto md:px-3 -mr-3 text-base w-auto bg-transparent shadow-none">Add custom
                       form</Button>
 

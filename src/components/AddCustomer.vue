@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="pt-7 flex items-center mt-3">
-            <Button @emitclick="consoleClick" class="sm:min-w-40 " :btn-primary="true">Add customer</Button>
+            <Button @click="consoleClick" class="sm:min-w-40 " :btn-primary="true">Add customer</Button>
           </div>
         </div>
       </div>

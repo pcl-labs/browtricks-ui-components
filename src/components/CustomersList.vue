@@ -33,7 +33,7 @@
                 label-text=""
                 name="search"
                 v-model="password"
-                placeholder="Search forms"
+                placeholder="Search for customer"
                 inputClasses="pl-10 border-peach"
               />
             </div>
@@ -48,10 +48,10 @@
                   active
                     ? 'bg-peach border-peach'
                     : 'border-grey-700 bg-white',
-                  'block px-4 py-3 text-sm text-left ease-in-out duration-300 w-full',
+                  'block pl-4 pr-5 py-2.5 text-sm text-left ease-in-out duration-300 w-full',
                 ]"
               >
-                <ShortIcon class="w-5 h-4 mr-2" /> <span>Short</span>
+                <ShortIcon class="w-4 mr-2" /> <span>Sort</span>
               </MenuButton>
                 
 

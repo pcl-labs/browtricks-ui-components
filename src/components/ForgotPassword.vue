@@ -43,7 +43,7 @@
 
               <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                  <Button type="submit"  @emitclick="consoleClick">
+                  <Button type="submit"  @click="consoleClick">
                     Reset password</Button
                   >
                 </div>
