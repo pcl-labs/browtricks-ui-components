@@ -215,7 +215,7 @@ import FileSelect from '@/components/FileSelect.vue';
 import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
 import LinkChain from '@/assets/icons/LinkChain.vue';
 import ShortIcon from '@/assets/icons/ShortIcon.vue';
-import Button from '@/components/layout/Button.vue';
+import Button from '@/components/Button.vue';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
 let file = null;
 

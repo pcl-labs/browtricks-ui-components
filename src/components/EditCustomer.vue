@@ -315,14 +315,14 @@
 
 <script setup>
 import { ref, reactive } from 'vue';
-import DialogPopup from '@/components/layout/DialogPopup.vue';
+import DialogPopup from '@/components/DialogPopup.vue';
 import RemoveProfile from '@/assets/icons/RemoveProfile.vue';
 import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
 import trashIcon from '@/assets/icons/trash.vue';
 import ArrowLeft from '@/assets/icons/ArrowLeft.vue';
-import Input from '@/components/layout/Input.vue';
-import Button from '@/components/layout/Button.vue';
-import Textarea from '@/components/layout/Textarea.vue';
+import Input from '@/components/Input.vue';
+import Button from '@/components/Button.vue';
+import Textarea from '@/components/Textarea.vue';
 import { DialogTitle } from '@headlessui/vue';
 
 const addNoteDailog = ref(false);

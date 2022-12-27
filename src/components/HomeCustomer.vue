@@ -100,7 +100,7 @@
 <script setup>
 import { reactive } from 'vue';
 import CheckIcon from '@/assets/icons/CheckIcon.vue';
-import Button from '@/components/layout/Button.vue';
+import Button from '@/components/Button.vue';
 // Setup Guide data
 const customerSteps = reactive([
   {

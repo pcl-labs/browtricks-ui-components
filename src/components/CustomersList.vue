@@ -196,8 +196,8 @@ import AngleRight from '@/assets/icons/AngleRight.vue';
 import AngleLeft from '@/assets/icons/AngleLeft.vue';
 import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
 import ShortIcon from '@/assets/icons/ShortIcon.vue';
-import Button from '@/components/layout/Button.vue';
-import Input from '@/components/layout/Input.vue';
+import Button from '@/components/Button.vue';
+import Input from '@/components/Input.vue';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
 const customers = [
   {

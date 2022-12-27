@@ -461,8 +461,8 @@ import FacebookLogo from '@/assets/icons/FacebookLogo.vue';
 import TwitterLogo from '@/assets/icons/TwitterLogo.vue';
 import InstagramLogo from '@/assets/icons/InstagramLogo.vue';
 import TiktokLogo from '@/assets/icons/TiktokLogo.vue';
-import Button from '@/components/layout/Button.vue';
-import Input from '@/components/layout/Input.vue';
+import Button from '@/components/Button.vue';
+import Input from '@/components/Input.vue';
 const roles = [
   {
     id: '1',
