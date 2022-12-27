@@ -102,7 +102,7 @@
         <div class="flex-col">
           <div class="overflow-x-auto">
             <div class="inline-block min-w-full align-middle md:px-0 lg:px-0">
-              <div class="overflow-hidden">
+              <div class="overflow-hidden pt-2">
                 <table
                   class="min-w-full border-0 border-collapse divide-y divide-gray-200"
                 >
@@ -110,19 +110,19 @@
                     <tr>
                       <th
                         scope="col"
-                        class="py-3.5 w-1/3 pl-4 pr-3 text-left text-sm font-bold text-grey-800 sm:pl-6"
+                        class="py-3.5 w-1/3 pl-4 pr-3 text-left text-sm font-semibold text-grey-800 sm:pl-6"
                       >
                         Customer name
                       </th>
                       <th
                         scope="col"
-                        class="px-3 w-1/3 py-3.5 text-left text-sm font-bold text-grey-800"
+                        class="px-3 w-2/3 py-3.5 text-sm font-semibold text-grey-800 text-center"
                       >
-                        Phone
+                       <span class="w-60 max-w-full inline-flex text-left">Phone</span> 
                       </th>
                       <th
                         scope="col"
-                        class="px-3 w-1/3 py-3.5 text-left text-sm font-bold text-grey-800"
+                        class="px-3 w-1/3 py-3.5 text-left text-sm font-semibold text-grey-800"
                       >
                         Email
                       </th>
@@ -135,17 +135,19 @@
                       class="odd:bg-white even:bg-grey-100"
                     >
                       <td
-                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 font-medium"
+                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 font-normal text-grey-800"
                       >
                         {{ cust.name }}
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-sm font-medium"
+                        class="whitespace-nowrap px-3 py-4 text-sm font-normal text-grey-800 text-center"
                       >
+                       <span class="w-60 max-w-full inline-flex text-left">
                         {{ cust.phone }}
+                        </span>
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-sm font-medium"
+                        class="whitespace-nowrap px-3 py-4 text-sm font-normal text-grey-800"
                       >
                         {{ cust.email }}
                       </td>
