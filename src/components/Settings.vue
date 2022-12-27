@@ -354,7 +354,7 @@
                         <input
                           type="checkbox"
                           id="create"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="create"
@@ -367,7 +367,7 @@
                         <input
                           type="checkbox"
                           id="read"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="read"
@@ -380,7 +380,7 @@
                         <input
                           type="checkbox"
                           id="delete"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="delete"
@@ -393,7 +393,7 @@
                         <input
                           type="checkbox"
                           id="update"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="update"

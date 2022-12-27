@@ -53,7 +53,7 @@
                 <input
                   id="search"
                   name="search"
-                  class="block w-full placeholder-black/40 appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach focus:outline-none focus:ring-peach sm:text-sm peer pl-10"
+                  class="block w-full placeholder-black/40 appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach-500 focus:outline-none focus:ring-peach-500 sm:text-sm peer pl-10"
                   placeholder="Search"
                   type="search"
                 />
@@ -65,10 +65,10 @@
               <Menu as="div" class="relative inline-block text-left">
               
               <MenuButton 
-                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach "
+                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 "
                 :class="[
                   active
-                    ? 'bg-peach border-peach'
+                    ? 'bg-peach-500 border-peach-500'
                     : 'border-grey-700 bg-white',
                   'block px-4 py-3 text-sm text-left ease-in-out duration-300 w-full',
                 ]"

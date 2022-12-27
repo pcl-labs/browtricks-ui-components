@@ -34,7 +34,7 @@
                 name="search"
                 v-model="password"
                 placeholder="Search for customer"
-                inputClasses="pl-10 border-peach"
+                inputClasses="pl-10 border-peach-500"
               />
             </div>
 
@@ -43,10 +43,10 @@
               <Menu as="div" class="relative inline-block text-left">
               
                 <MenuButton 
-                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach focus:outline-none outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 ease-in-out duration-300 hover:border-peach mt-1"
+                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 mt-1"
                 :class="[
                   active
-                    ? 'bg-peach border-peach'
+                    ? 'bg-peach-500 border-peach-500'
                     : 'border-grey-700 bg-white',
                   'block pl-4 pr-5 py-2.5 text-sm text-left ease-in-out duration-300 w-full',
                 ]"

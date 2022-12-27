@@ -86,7 +86,7 @@
                 <span>Don’t have an account?</span>
                 <router-link
                   to="/signup"
-                  class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300 ml-2"
+                  class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300 ml-2"
                   >Sign Up</router-link
                 >
               </div>
@@ -96,7 +96,7 @@
         <div class="text-center w-full">
           <router-link
             to="/forgot-password"
-            class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300"
+            class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300"
             >Forgot password?</router-link
           >
         </div>

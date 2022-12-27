@@ -54,7 +54,7 @@
         <div class="text-center w-full">
           <router-link
             to="/login"
-            class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300"
+            class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300"
             >Back to login</router-link
           >
         </div>

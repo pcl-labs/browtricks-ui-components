@@ -1,7 +1,7 @@
 <template>
   <label for="myfile" class="">
     <span
-      class="inline-flex w-full justify-center items-center rounded-md border border-peach bg-peach py-1 px-2 h-full text-xs font-semibold text-grey-800/70 shadow-sm hover:bg-peach-2 hover:border-peach-2 ease-in-out duration-300 cursor-pointer"
+      class="inline-flex w-full justify-center items-center rounded-md border border-peach-500 bg-peach-500 py-1 px-2 h-full text-xs font-semibold text-grey-800/70 shadow-sm hover:bg-peach-100 hover:border-peach-100 ease-in-out duration-300 cursor-pointer"
     >
       <span v-if="value">{{ value.name }}</span>
       <span v-else>Upload File </span>
