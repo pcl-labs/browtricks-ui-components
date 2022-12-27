@@ -75,12 +75,8 @@
                       class="space-y-5"
                     >
                       <p class="text-md text-grey-800">{{ step.answer }}</p>
-                      <button
-                        type="submit"
-                        class="mt-4 flex w-auto justify-center rounded-md border border-transparent bg-peach py-2 px-4 text-sm font-semibold text-grey-800 shadow-sm hover:bg-peach-2 focus:outline-none focus:ring-2 focus:ring-peach focus:ring-offset-2 transition-all ease-in-out duration-300"
-                      >
-                        Add customers
-                      </button>
+                      <Button @click="consoleClick" class="sm:min-w-40 mt-4" :btn-primary="true">Add customer</Button>
+
                     </div>
                   </div>
                 </a>
@@ -104,7 +100,7 @@
 <script setup>
 import { reactive } from 'vue';
 import CheckIcon from '@/assets/icons/CheckIcon.vue';
-
+import Button from '@/components/layout/Button.vue';
 // Setup Guide data
 const customerSteps = reactive([
   {

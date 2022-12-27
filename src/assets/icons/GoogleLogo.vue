@@ -1,4 +1,4 @@
- <template>
+<template>
   <svg
     class="w-5 h-5"
     viewBox="0 0 16 16"
@@ -29,4 +29,4 @@
       </clipPath>
     </defs>
   </svg>
-</template> 
+</template>

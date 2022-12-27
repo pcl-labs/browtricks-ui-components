@@ -4,7 +4,6 @@
     <!-- column wrapper -->
     <div class="flex flex-1 relative items-stretch">
       <SidebarNavigation />
-
       <Settings />
     </div>
   </div>

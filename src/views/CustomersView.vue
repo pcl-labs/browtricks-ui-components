@@ -4,7 +4,7 @@
     <!-- column wrapper -->
     <div class="flex flex-1 relative items-stretch">
       <SidebarNavigation />
-      <h1>Customer page</h1>
+      <CustomersDashboard />
     </div>
   </div>
 </template>
@@ -14,6 +14,6 @@ import { reactive } from 'vue';
 
 import TopNavbar from '@/components/layout/TopNavbar.vue';
 import SidebarNavigation from '@/components/layout/SidebarNavigation.vue';
-
+import CustomersDashboard from '@/components/CustomersDashboard.vue';
 const isLogin = reactive(true);
 </script>

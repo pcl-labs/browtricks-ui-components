@@ -69,17 +69,23 @@
 
         <div class="space-y-2 relative pr-2 py-4">
           <router-link
-            :to="item.href"
-            active-class="current"
-            exact
-            v-for="item in SidebarNavigation"
-            :key="item.name"
-            :class="
-              item.current
-                ? 'before:opacity-100 after:opacity-100'
-                : 'before:opacity-0 after:opacity-0'
-            "
+          tag="div"
+          :to="item.href"
+          v-slot="{navigate, isActive, isExactActive }"
+          exact
+          v-for="item in SidebarNavigation"
+          :key="item.name"
+          @click="navigate"
+          class="block"
+        >
+          <span
             class="group text-grey-800 flex items-center pr-2 pl-6 py-2.5 text-sm font-medium rounded-md transition-all ease-in-out duration-300 relative after:rounded-full after:w-1.5 after:bg-peach after:absolute after:inset-y-0 after:left-0 before:absolute before:bg-peach before:inset-0 before:rounded before:left-3 hover:before:opacity-100 hover:after:opacity-100 after:transition-all after:ease-in-out after:duration-300 before:transition-all before:ease-in-out before:duration-300"
+            :class="[
+              isActive && 'before:opacity-100 after:opacity-100 ',
+              !isActive && 'before:opacity-0 after:opacity-0 ',
+              isExactActive && 'before:opacity-100 after:opacity-100 ',
+              !isExactActive && 'before:opacity-0 after:opacity-0 ',
+            ]"
           >
             <span class="relative z-10 flex items-center">
               <component
@@ -90,7 +96,9 @@
               />
               {{ item.name }}
             </span>
-          </router-link>
+          </span>
+        </router-link>
+       
         </div>
       </nav>
     </aside>
@@ -98,32 +106,39 @@
 
   <!-- Desktop Only -->
   <div class="flex-col w-70 border-r bordr-grey-500 hidden md:flex">
-    <nav class="flex-1 space-y-1 pr-2 py-4 bg-" aria-label="Sidebar">
-      <div class="space-y-2 relative">
+    <nav class="flex-1 space-y-2 pr-2 py-4 relative " aria-label="Sidebar">
+      
         <router-link
+          tag="div"
           :to="item.href"
-          active-class="current"
+          v-slot="{navigate, isActive, isExactActive }"
           exact
           v-for="item in SidebarNavigation"
           :key="item.name"
-          :class="
-            item.current
-              ? 'before:opacity-100 after:opacity-100'
-              : 'before:opacity-0 after:opacity-0'
-          "
-          class="group text-grey-800 flex items-center pr-2 pl-6 py-2.5 text-sm font-medium rounded-md transition-all ease-in-out duration-300 relative after:rounded-full after:w-1.5 after:bg-peach after:absolute after:inset-y-0 after:left-0 before:absolute before:bg-peach before:inset-0 before:rounded before:left-3 hover:before:opacity-100 hover:after:opacity-100 after:transition-all after:ease-in-out after:duration-300 before:transition-all before:ease-in-out before:duration-300"
+          @click="navigate"
+          class="block"
         >
-          <span class="relative z-10 flex items-center">
-            <component
-              :is="item.icon"
-              :class="item.classIcon"
-              class="mr-3 text-grey-900"
-              aria-hidden="true"
-            />
-            {{ item.name }}
+          <span
+            class="group text-grey-800 flex items-center pr-2 pl-6 py-2.5 text-sm font-medium rounded-md transition-all ease-in-out duration-300 relative after:rounded-full after:w-1.5 after:bg-peach after:absolute after:inset-y-0 after:left-0 before:absolute before:bg-peach before:inset-0 before:rounded before:left-3 hover:before:opacity-100 hover:after:opacity-100 after:transition-all after:ease-in-out after:duration-300 before:transition-all before:ease-in-out before:duration-300"
+            :class="[
+              isActive && 'before:opacity-100 after:opacity-100 ',
+              !isActive && 'before:opacity-0 after:opacity-0 ',
+              isExactActive && 'before:opacity-100 after:opacity-100 ',
+              !isExactActive && 'before:opacity-0 after:opacity-0 ',
+            ]"
+          >
+            <span class="relative z-10 flex items-center">
+              <component
+                :is="item.icon"
+                :class="item.classIcon"
+                class="mr-3 text-grey-900"
+                aria-hidden="true"
+              />
+              {{ item.name }}
+            </span>
           </span>
         </router-link>
-      </div>
+       
     </nav>
   </div>
 </template>
@@ -153,8 +168,18 @@ const SidebarNavigation = [
     icon: HeartIcon,
     classIcon: 'h-4 w-4',
   },
-  { name: 'PMU Forms', href: '#', icon: FormIcon, classIcon: 'h-5 w-5' },
-  { name: 'Media', href: '#', icon: MediaIcon, classIcon: 'h-5 w-5' },
+  {
+    name: 'PMU Forms',
+    href: '/pmu',
+    icon: FormIcon,
+    classIcon: 'h-5 w-5',
+  },
+  {
+    name: 'Media',
+    href: '/media',
+    icon: MediaIcon,
+    classIcon: 'h-5 w-5',
+  },
   {
     name: 'Settings',
     href: '/settings',

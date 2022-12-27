@@ -1,4 +1,3 @@
- 
 <template>
   <svg fill="currentColor" viewBox="0 0 20 20">
     <path
