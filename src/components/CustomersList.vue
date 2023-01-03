@@ -21,7 +21,7 @@
             <div class="relative flex-1">
               <div
                 class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
-              >
+                >
                 <MagnifyingGlassIcon
                   class="h-4 w-4 text-grey-900 mt-1"
                   aria-hidden="true"
@@ -43,12 +43,12 @@
               <Menu as="div" class="relative inline-block text-left">
               
                 <MenuButton 
-                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 mt-1"
+                class="inline-flex items-center rounded-md border border-grey-700  text-lg font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 mt-1"
                 :class="[
                   active
                     ? 'bg-peach-500 border-peach-500'
                     : 'border-grey-700 bg-white',
-                  'block pl-4 pr-5 py-2.5 text-sm text-left ease-in-out duration-300 w-full',
+                  'block pl-4 pr-5 py-2.5 text-lg text-left ease-in-out duration-300 w-full',
                 ]"
               >
                 <ShortIcon class="w-4 mr-2" /> <span>Sort</span>
@@ -73,7 +73,7 @@
                             active
                               ? 'bg-gray-100 text-gray-900'
                               : 'text-gray-700',
-                            'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                            'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                           ]"
                         >
                           A-Z
@@ -85,7 +85,7 @@
                             active
                               ? 'bg-gray-100 text-gray-900'
                               : 'text-gray-700',
-                            'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                            'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                           ]"
                         >
                           Z-A
@@ -110,19 +110,19 @@
                     <tr>
                       <th
                         scope="col"
-                        class="py-3.5 w-1/3 pl-4 pr-3 text-left text-sm font-semibold text-grey-800 sm:pl-6"
+                        class="py-3.5 w-1/3 pl-4 pr-3 text-left text-lg font-semibold text-grey-800 sm:pl-6"
                       >
                         Customer name
                       </th>
                       <th
                         scope="col"
-                        class="px-3 w-2/3 py-3.5 text-sm font-semibold text-grey-800 text-center"
+                        class="px-3 w-2/3 py-3.5 text-lg font-semibold text-grey-800 text-center"
                       >
                        <span class="w-60 max-w-full inline-flex text-left">Phone</span> 
                       </th>
                       <th
                         scope="col"
-                        class="px-3 w-1/3 py-3.5 text-left text-sm font-semibold text-grey-800"
+                        class="px-3 w-1/3 py-3.5 text-left text-lg font-semibold text-grey-800"
                       >
                         Email
                       </th>
@@ -135,19 +135,19 @@
                       class="odd:bg-white even:bg-grey-100"
                     >
                       <td
-                        class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6 font-normal text-grey-800"
+                        class="whitespace-nowrap py-4 pl-4 pr-3 text-lg sm:pl-6 font-normal text-grey-800"
                       >
                         {{ cust.name }}
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-sm font-normal text-grey-800 text-center"
+                        class="whitespace-nowrap px-3 py-4 text-lg font-normal text-grey-800 text-center"
                       >
                        <span class="w-60 max-w-full inline-flex text-left">
                         {{ cust.phone }}
                         </span>
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-sm font-normal text-grey-800"
+                        class="whitespace-nowrap px-3 py-4 text-lg font-normal text-grey-800"
                       >
                         {{ cust.email }}
                       </td>
@@ -165,11 +165,11 @@
             <div class="flex flex-1 justify-start items-center gap-2">
               <a
                 href="#"
-                class="relative inline-flex items-center rounded-l border border-grey-500 bg-white px-2.5 py-2 text-sm font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
+                class="relative inline-flex items-center rounded-l border border-grey-500 bg-white px-2.5 py-2 text-lg font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
               >
                 <AngleLeft class="w-1.5" />
               </a>
-              <p class="text-sm text-grey-800 font-medium">
+              <p class="text-lg text-grey-800 font-medium">
                 <!-- space -->
                 <span class="">10</span>
                 <!-- space -->
@@ -180,7 +180,7 @@
               </p>
               <a
                 href="#"
-                class="relative inline-flex items-center rounded-r border border-grey-500 bg-white px-2.5 py-2 text-sm font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
+                class="relative inline-flex items-center rounded-r border border-grey-500 bg-white px-2.5 py-2 text-lg font-medium text-grey-800 hover:bg-grey-500 ease-in-out duration-300"
                 ><AngleRight class="w-1.5"
               /></a>
             </div>

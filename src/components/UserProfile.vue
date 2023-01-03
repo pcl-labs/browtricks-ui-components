@@ -4,7 +4,7 @@
     <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
       <div class="mb-7 pb-10 space-y-5 border-b border-solid border-gray-300">
         <h2
-          class="flex-1 text-2.5xl font-semibold leading-none text-black pb-3"
+          class="flex-1 text-5xl font-semibold leading-none text-black pb-3"
         >
           Chris Luke
         </h2>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="mb-7 space-y-7">
-        <h2 class="flex-1 text-2.5xl font-semibold leading-none text-black">
+        <h2 class="flex-1 text-5xl font-semibold leading-none text-black">
           Your media
         </h2>
         <div
@@ -53,7 +53,7 @@
                 <input
                   id="search"
                   name="search"
-                  class="block w-full placeholder-black/40 appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach-500 focus:outline-none focus:ring-peach-500 sm:text-sm peer pl-10"
+                  class="block w-full placeholder-black/40 appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 placeholder-grey-800 shadow-sm font-medium focus:border-peach-500 focus:outline-none focus:ring-peach-500 sm:text-lg peer pl-10"
                   placeholder="Search"
                   type="search"
                 />
@@ -65,12 +65,12 @@
               <Menu as="div" class="relative inline-block text-left">
               
               <MenuButton 
-                class="inline-flex items-center rounded-md border border-grey-700  text-sm font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 "
+                class="inline-flex items-center rounded-md border border-grey-700  text-lg font-medium text-grey-800 shadow-sm hover:bg-peach-500 focus:outline-none outline-none focus:ring-2 focus:ring-peach-500 focus:ring-offset-2 ease-in-out duration-300 hover:border-peach-500 "
                 :class="[
                   active
                     ? 'bg-peach-500 border-peach-500'
                     : 'border-grey-700 bg-white',
-                  'block px-4 py-3 text-sm text-left ease-in-out duration-300 w-full',
+                  'block px-4 py-3 text-lg text-left ease-in-out duration-300 w-full',
                 ]"
               >
                 <ShortIcon class="w-5 h-4 mr-2" /> <span>Short</span>
@@ -95,7 +95,7 @@
                         active
                           ? 'bg-gray-100 text-gray-900'
                           : 'text-gray-700',
-                        'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                        'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                       ]"
                     >
                       A-Z
@@ -107,7 +107,7 @@
                         active
                           ? 'bg-gray-100 text-gray-900'
                           : 'text-gray-700',
-                        'block px-4 py-2 text-sm text-left ease-in-out duration-300 w-full',
+                        'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                       ]"
                     >
                       Z-A
@@ -134,25 +134,25 @@
                       <tr>
                         <th
                           scope="col"
-                          class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-grey-800 sm:pl-6"
+                          class="py-3.5 pl-4 pr-3 text-left text-lg font-semibold text-grey-800 sm:pl-6"
                         >
                           Media
                         </th>
                         <th
                           scope="col"
-                          class="px-3 py-3.5 text-left text-sm font-semibold text-grey-800"
+                          class="px-3 py-3.5 text-left text-lg font-semibold text-grey-800"
                         >
                           Customer
                         </th>
                         <th
                           scope="col"
-                          class="px-3 py-3.5 text-center text-sm font-semibold text-grey-800"
+                          class="px-3 py-3.5 text-center text-lg font-semibold text-grey-800"
                         >
                           Link
                         </th>
                         <th
                           scope="col"
-                          class="px-3 py-3.5 pr-8 text-right text-sm font-semibold text-grey-800"
+                          class="px-3 py-3.5 pr-8 text-right text-lg font-semibold text-grey-800"
                         >
                           Date added
                         </th>
@@ -161,7 +161,7 @@
                     <tbody class="divide-y divide-gray-200 bg-white">
                       <tr v-for="cust in customers" :key="cust.email">
                         <td
-                          class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
+                          class="whitespace-nowrap py-4 pl-4 pr-3 text-lg sm:pl-6"
                         >
                           <div class="flex items-center">
                             <div class="h-10 w-10 flex-shrink-0">
@@ -180,20 +180,20 @@
                           </div>
                         </td>
                         <td
-                          class="whitespace-nowrap px-3 py-4 text-sm text-blue"
+                          class="whitespace-nowrap px-3 py-4 text-lg text-blue"
                         >
                           {{ cust.name }}
                         </td>
                         <td class="text-center">
                           <a
                             href="javascript:void(0)"
-                            class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-sm font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ease-in-out duration-300 w-12 h-12"
+                            class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ease-in-out duration-300 w-12 h-12"
                           >
                             <LinkChain class="w- h-5" />
                           </a>
                         </td>
                         <td
-                          class="whitespace-nowrap px-3 py-4 pr-8 text-right text-sm text-gray-500"
+                          class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-gray-500"
                         >
                           {{ cust.date_added }}
                         </td>

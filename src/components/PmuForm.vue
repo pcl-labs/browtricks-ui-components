@@ -4,7 +4,7 @@
       <div
         class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-gray-300"
       >
-        <h2 class="flex-1 text-2.5xl font-bold leading-none text-grey-800 mb-5">
+        <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">
           PMU Form Coming soon
         </h2>
      

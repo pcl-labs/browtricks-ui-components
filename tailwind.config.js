@@ -26,8 +26,7 @@ module.exports = {
           100:'#EDE9E7',
           200: '#baa69d',
           300: '#8c7c76',
-          500: '#E9CFC4',
-          
+          500: '#E9CFC4', 
         },
         red: {
           DEFAULT: '#D82C0D',
@@ -99,15 +98,17 @@ module.exports = {
         3: '0rem 0.063rem  0.375rem rgba(0, 0, 0, 0.1)',
       },
 
-      fontSize: {
-        mi: '.65rem',
-        md: '.9375rem',
-        '2.5xl': '1.75rem',
-        '3.5xl': '2rem',
-        '4.5xl': '2.5rem',
-        '5.5xl': '3.5rem',
-        '6.5xl': ['4rem', '1.10'],
-        '7.5xl': '5rem',
+      fontSize: {        
+        xs: '.625rem',
+        sm: '.75rem',
+        md: '.8125rem',
+        lg: '.875rem',
+        xl: '.9375rem',
+        base: '1rem',
+        '2xl': '1.125rem',
+        '3xl': '1.25rem',
+        '4xl': '1.625rem',
+        '5xl': '2rem',
       },
 
       borderWidth: {

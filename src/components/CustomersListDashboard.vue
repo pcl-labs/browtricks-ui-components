@@ -6,7 +6,7 @@
       <CustomersList />
     </div>
     <div v-else class="bg-gray-100 px-4 py-3 md:p-5 xl:px-14 xl:py-12"> 
-      <h1 class="flex-1 text-2.5xl font-bold leading-none text-grey-800 mb-5">               
+      <h1 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">               
         Customers
         </h1>
       <div class="overflow-hidden rounded-lg shadow-3 bg-white">
@@ -16,7 +16,7 @@
             <div class="flex flex-col space-y-10">
               <div class="space-y-4">
               <h2 class="text-2xl font-bold text-grey-800 leading-none">View customer List</h2>
-              <p class="text-md text-grey-900">Get started by adding customer contact info in order to add media, manage PMU form      
+              <p class="text-xl text-grey-900">Get started by adding customer contact info in order to add media, manage PMU form      
                 signing, and notes.</p>
               </div>
             <Button type="submit" :btn-primary="true"  @click="showAddCustomer = true" class="w-auto sm:px-6 mx-auto">Customer List</Button>
