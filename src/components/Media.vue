@@ -123,7 +123,7 @@
                           </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-                          <tr v-for="cust in customers" :key="cust.email" class="odd:bg-white even:bg-grey-100">
+                          <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true" class="odd:bg-white even:bg-grey-100">
                             <td class="whitespace-nowrap p-3 pl-4 text-lg sm:pl-6" >
                               <div class="flex items-center">
                                 <div class="h-14 w-14 flex justify-center items-center flex-shrink-0 overflow-hidden rounded">

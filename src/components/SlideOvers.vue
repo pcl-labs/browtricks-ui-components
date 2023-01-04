@@ -294,7 +294,7 @@
                         :btn-primary="false"
                         class="text-red hover:bg-red/10 xs:px-4 gap-x-2 inline-flex items-center"
                       >
-                        <TrashIcon class="w-4" /> Delete Team
+                        <TrashIcon class="w-4" /> Delete Media
                       </Button>
                     </div>
                   </div>
