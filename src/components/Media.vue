@@ -4,10 +4,16 @@
       <div class="space-y-6 pt-3 md:pt-0 md:pb-7 border-0 border-solid border-gray-300">
         <div class="flex items-center px-3 md:px-0">
         <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mr-auto">Media</h2>
-            <Button @click="isUploadMedia = true">Add Media</Button>
+           <div class="flex gap-2">
+               <!-- Start
+                Just for demo purpose to see how alert gets open -->
+             <Button @click="isCloseAlert = true" class="w-auto sm:px-6 bg-peach-100" :btn-primary="true">Show Alert</Button>
+               <!-- End -->
             <!-- <template v-if="isMoreMedia">
               <Button type="submit" :btn-primary="true" class="w-auto sm:px-6 ml-2 hidden sm:block" @click="isMoreMedia = false">Add Media</Button>
             </template> -->
+            <Button @click="isUploadMedia = true">Add Media</Button>
+          </div>
         </div>
         <div v-if="!isMoreMedia" class="overflow-hidden md:rounded-lg shadow-3 bg-white">
           <div class="setup-guide-area py-20 px-4 lg:p-40">
@@ -195,10 +201,52 @@
         </div>    
       </div>
     </div>
+
+   
+
+
     <SlideOvers :open-dialog="isUploadMedia" @closeModal="isUploadMedia = false">
       <FileSelect />
     </SlideOvers>
+
+
+    
   </div>
+
+
+<!-- Start Alert -->
+    <Alert :open-alert="isCloseAlert" @closeAlert="isCloseAlert = false" :show-details-btn="true">
+      <template #icon>
+        <SuccessIcon class="w-4 text-green" />
+      </template>
+      <template #title>File uploaded</template>
+      <!-- Here description -->
+      <template #description>
+        <div class="pl-7 text-md text-grey-700">description</div>
+      </template>
+
+      <template #details>
+        <div class="space-y-1">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 flex justify-center items-center shrink-0 overflow-hidden rounded">
+              <img class="aspect-square object-cover"
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                alt="">
+            </div>
+        
+            <p class="font-medium text-grey-700 text-lg">Screenshot...102531.png</p>         
+            <ExclamationIcon class="w-5 ml-auto text-red" />     
+          </div>
+          <p class="text-red font-medium pl-11">File Format is not supported</p>  
+              
+        </div>
+       
+      </template>
+    </Alert>
+    <!-- End Alert -->
+
+
+
 </template>
 
 <script setup>
@@ -208,16 +256,20 @@
   import Button from '@/components/Button.vue';
   import SlideOvers from '@/components/SlideOvers.vue';
   import FileSelect from '@/components/FileSelect.vue';
-
+  import Alert from '@/components/Alert.vue';
   import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
   import LinkChain from '@/assets/icons/LinkChain.vue';
+  import ExclamationIcon from '@/assets/icons/exclamation.vue'; 
   import ShortIcon from '@/assets/icons/ShortIcon.vue'; 
+  import SuccessIcon from '@/assets/icons/success.vue'; 
  
   import Input from '@/components/Input.vue';
   import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue';
+import Success from '../assets/icons/success.vue';
 
   const isMoreMedia = ref(false);
   const isUploadMedia = ref(false);
+  const isCloseAlert = ref(false);
   const customers = [
   {
     name: 'Lindsay Walton',

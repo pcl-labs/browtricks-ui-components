@@ -28,6 +28,7 @@ module.exports = {
           300: '#8c7c76',
           500: '#E9CFC4', 
         },
+        green:'#9AC9B4',
         red: {
           DEFAULT: '#D82C0D',
         },
