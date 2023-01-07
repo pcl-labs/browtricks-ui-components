@@ -324,7 +324,7 @@ import {
   ComboboxOption,
 } from '@headlessui/vue';
 import XMarkIcon from '@/assets/icons/XMarkIcon.vue';
-import TrashIcon from '@/assets/icons/Trash.vue';
+import TrashIcon from '@/assets/icons/trash.vue';
 import Input from '@/components/Input.vue';
 import Button from '@/components/Button.vue';
 import Textarea from '@/components/Textarea.vue';
