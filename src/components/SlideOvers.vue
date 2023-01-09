@@ -262,7 +262,7 @@
                         :btn-primary="true"
                         >Upload</Button
                       >
-                      <Button
+                      <Button @click="$emit('closeModal')"
                         class="w-auto sm:px-8"
                         type="button"
                         :btn-outline="true"
