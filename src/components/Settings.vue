@@ -354,7 +354,7 @@
                         <input
                           type="checkbox"
                           id="create"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="create"
@@ -367,7 +367,7 @@
                         <input
                           type="checkbox"
                           id="read"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="read"
@@ -380,7 +380,7 @@
                         <input
                           type="checkbox"
                           id="delete"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="delete"
@@ -393,7 +393,7 @@
                         <input
                           type="checkbox"
                           id="update"
-                          class="relative top-1 text-peach rounded shadow-md border-pearch focus:ring-peach"
+                          class="relative top-1 text-peach-500 rounded shadow-md border-pearch focus:ring-peach-500"
                         />
                         <label
                           for="update"
@@ -461,8 +461,8 @@ import FacebookLogo from '@/assets/icons/FacebookLogo.vue';
 import TwitterLogo from '@/assets/icons/TwitterLogo.vue';
 import InstagramLogo from '@/assets/icons/InstagramLogo.vue';
 import TiktokLogo from '@/assets/icons/TiktokLogo.vue';
-import Button from '@/components/layout/Button.vue';
-import Input from '@/components/layout/Input.vue';
+import Button from '@/components/Button.vue';
+import Input from '@/components/Input.vue';
 const roles = [
   {
     id: '1',

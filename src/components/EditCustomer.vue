@@ -48,12 +48,12 @@
                           <MagnifyingGlassIcon class="h-4 w-4 text-grey-900" aria-hidden="true" />
                         </div>
                         <Input id="search" type="search" label-text="" name="search" v-model="password"
-                          placeholder="Search forms" inputClasses="pl-10 border-peach" />
+                          placeholder="Search forms" inputClasses="pl-10 border-peach-500" />
                       </div>
                     </div>
                     <div class="sm:flex-none flex">
 
-                      <Button :btn-no-border="true" :btn-primary="false" class="mt-1 border-grey-700 hover:border-peach">Browse</Button>
+                      <Button :btn-no-border="true" :btn-primary="false" class="mt-1 border-grey-700 hover:border-peach-500">Browse</Button>
 
                     </div>
                   </div>
@@ -69,9 +69,9 @@
 
                   <div class="flow-root">
                     <ul role="list"
-                      class="space-y-10 relative after:absolute after:z-0 after:top-0 after:left-2 after:h-[calc(100%-20px)] after:border-dashed after:border-peach after:border-l">
+                      class="space-y-10 relative after:absolute after:z-0 after:top-0 after:left-2 after:h-[calc(100%-20px)] after:border-dashed after:border-peach-500 after:border-l">
                       <li v-for="(activityItem) in activity" :key="activityItem.id" class="flex gap-x-3 relative">
-                        <div class="flex h-4 w-4 items-center justify-center rounded-full bg-peach ring-8 ring-white">
+                        <div class="flex h-4 w-4 items-center justify-center rounded-full bg-peach-500 ring-8 ring-white">
                         </div>
                         <div class="text-sm text-gray-500 leading-none">
                           <span
@@ -315,14 +315,14 @@
 
 <script setup>
 import { ref, reactive } from 'vue';
-import DialogPopup from '@/components/layout/DialogPopup.vue';
+import DialogPopup from '@/components/DialogPopup.vue';
 import RemoveProfile from '@/assets/icons/RemoveProfile.vue';
 import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
 import trashIcon from '@/assets/icons/trash.vue';
 import ArrowLeft from '@/assets/icons/ArrowLeft.vue';
-import Input from '@/components/layout/Input.vue';
-import Button from '@/components/layout/Button.vue';
-import Textarea from '@/components/layout/Textarea.vue';
+import Input from '@/components/Input.vue';
+import Button from '@/components/Button.vue';
+import Textarea from '@/components/Textarea.vue';
 import { DialogTitle } from '@headlessui/vue';
 
 const addNoteDailog = ref(false);

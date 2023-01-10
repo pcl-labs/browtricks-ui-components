@@ -33,7 +33,7 @@ import { ref } from 'vue';
 
 // import EditCustomer from '@/components/EditCustomer.vue';
 import AddCustomer from '@/components/AddCustomer.vue';
-import Button from '@/components/layout/Button.vue';
+import Button from '@/components/Button.vue';
 // import CustomersList from '@/components/CustomersList.vue';
 
 const showAddCustomer = ref(false);

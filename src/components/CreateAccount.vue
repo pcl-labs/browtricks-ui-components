@@ -79,7 +79,7 @@
                     id="country"
                     name="country"
                     autocomplete="country"
-                    class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 placeholder-grey-400 shadow-sm focus:border-peach focus:outline-none focus:ring-peach text-sm invalid:bg-red/5 invalid:border-red"
+                    class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-sm invalid:bg-red/5 invalid:border-red"
                   >
                     <option>US</option>
                     <option>CA</option>
@@ -89,7 +89,7 @@
                 <input
                   type="tel"
                   autocomplete="Phone"
-                  class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 pl-14 placeholder-grey-400 shadow-sm focus:border-peach focus:outline-none focus:ring-peach text-sm invalid:bg-red/5 invalid:border-red peer"
+                  class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 pl-14 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-sm invalid:bg-red/5 invalid:border-red peer"
                 />
                 <p class="text-red text-xs peer-invalid:block hidden pt-0.5">
                   <b>Error:</b> Invalid or incorrect Username Invalid or
@@ -167,7 +167,7 @@
                 <span>Already have an account?</span>
                 <router-link
                   to="/login"
-                  class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300 ml-2"
+                  class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300 ml-2"
                   >Login</router-link
                 >
               </div>
@@ -187,8 +187,8 @@ import GoogleIcon from '@/assets/icons/Google.vue';
 import FacebookIcon from '@/assets/icons/Facebook.vue';
 import Eye from '@/assets/icons/Eye.vue';
 import EyeOff from '@/assets/icons/EyeOff.vue';
-import Button from '@/components/layout/Button.vue';
-import Input from '@/components/layout/Input.vue';
+import Button from '@/components/Button.vue';
+import Input from '@/components/Input.vue';
 
 const showPassword = ref(false);
 const showPasswordRptr = ref(false);

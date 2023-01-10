@@ -86,7 +86,7 @@
                 <span>Don’t have an account?</span>
                 <router-link
                   to="/signup"
-                  class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300 ml-2"
+                  class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300 ml-2"
                   >Sign Up</router-link
                 >
               </div>
@@ -96,7 +96,7 @@
         <div class="text-center w-full">
           <router-link
             to="/forgot-password"
-            class="text-base inline-flex font-medium text-blue hover:text-peach-4 transition-all ease-in-out duration-300"
+            class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300"
             >Forgot password?</router-link
           >
         </div>
@@ -111,8 +111,8 @@ import logo from '@/assets/logo-browtricks.png';
 import AppleIcon from '@/assets/icons/Apple.vue';
 import GoogleIcon from '@/assets/icons/Google.vue';
 import FacebookIcon from '@/assets/icons/Facebook.vue';
-import Button from '@/components/layout/Button.vue';
-import Input from '@/components/layout/Input.vue';
+import Button from '@/components/Button.vue';
+import Input from '@/components/Input.vue';
 import Eye from '@/assets/icons/Eye.vue';
 import EyeOff from '@/assets/icons/EyeOff.vue';
 
