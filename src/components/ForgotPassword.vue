@@ -25,7 +25,7 @@
                 Forgot Password
               </h2>
               <p
-                class="text-start text-base font-normal text-gray-500 leading-snug"
+                class="text-start text-xl font-normal text-gray-500 leading-snug"
               >
                 Enter your registered email address to receive password reset
                 instructions.
@@ -54,7 +54,7 @@
         <div class="text-center w-full">
           <router-link
             to="/login"
-            class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300"
+            class="text-xl inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300"
             >Back to login</router-link
           >
         </div>

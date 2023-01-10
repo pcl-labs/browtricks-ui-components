@@ -15,7 +15,7 @@
         class="flex flex-col justify-center items-center max-w-sm mx-auto w-full xs:px-3 sm:px-4 gap-6"
       >
         <h2
-          class="text-center text-sm font-semibold tracking-tight leading-none text-black uppercase"
+          class="text-center text-lg font-semibold tracking-tight leading-none text-black uppercase"
         >
           Signup WITH
         </h2>
@@ -38,7 +38,7 @@
           <div class="absolute inset-0 flex items-center">
             <div class="w-full h-px bg-gray-300"></div>
           </div>
-          <div class="relative flex justify-center text-sm">
+          <div class="relative flex justify-center text-lg">
             <span class="bg-grey-200 px-4 text-gray-900 font-bold">OR</span>
           </div>
         </div>
@@ -69,7 +69,7 @@
             />
 
             <div class="space-y-1">
-              <label class="lblock text-sm font-normal text-grey-900 text-start"
+              <label class="lblock text-lg font-normal text-grey-900 text-start"
                 >Phone Number</label
               >
               <div class="relative mt-1 rounded-md shadow-sm">
@@ -79,7 +79,7 @@
                     id="country"
                     name="country"
                     autocomplete="country"
-                    class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-sm invalid:bg-red/5 invalid:border-red"
+                    class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-lg invalid:bg-red/5 invalid:border-red"
                   >
                     <option>US</option>
                     <option>CA</option>
@@ -89,7 +89,7 @@
                 <input
                   type="tel"
                   autocomplete="Phone"
-                  class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 pl-14 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-sm invalid:bg-red/5 invalid:border-red peer"
+                  class="block w-full appearance-none rounded-md border bg-transparent border-grey-300 px-3 py-3 pl-14 placeholder-grey-400 shadow-sm focus:border-peach-500 focus:outline-none focus:ring-peach-500 text-lg invalid:bg-red/5 invalid:border-red peer"
                 />
                 <p class="text-red text-xs peer-invalid:block hidden pt-0.5">
                   <b>Error:</b> Invalid or incorrect Username Invalid or
@@ -163,11 +163,11 @@
                 >
               </div>
 
-              <div class="text-sm text-grey-900 font-normal">
+              <div class="text-lg text-grey-900 font-normal">
                 <span>Already have an account?</span>
                 <router-link
                   to="/login"
-                  class="text-base inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300 ml-2"
+                  class="text-xl inline-flex font-medium text-blue hover:text-peach-300 transition-all ease-in-out duration-300 ml-2"
                   >Login</router-link
                 >
               </div>

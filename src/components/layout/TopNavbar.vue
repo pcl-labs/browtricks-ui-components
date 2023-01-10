@@ -3,7 +3,7 @@
     <!--Top Navbar -->
     <Disclosure
       as="nav"
-      class="flex-shrink-0 bg-white py-1.5 shadow relative z-30"
+      class="flex-shrink-0 bg-white py-1.5 shadow relative"
       v-slot="{ open }"
     >
       <div class="mx-auto w-full max-w-8xl px-2 sm:px-4 lg:px-5 lg:pr-14">
@@ -32,7 +32,7 @@
                 <div>
                   <MenuButton as="button" class="flex items-center gap-3 group">
                     <span class="sm:inline-flex gap-1 hidden">
-                      <span class="text-sm text-grey-800 font-semibold">
+                      <span class="text-lg text-grey-800 font-semibold">
                         {{ user.username }}
                       </span>
                       <caretDown class="w-3 text-grey-800/50" />
@@ -60,17 +60,17 @@
                     class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
                     <div class="px-4 py-3" role="none">
-                      <p class="text-sm" role="none">
+                      <p class="text-lg" role="none">
                         <router-link :to="user.profile_url"
                           ><span
-                            class="block md:hidden text-sm text-grey-800 font-semibold"
+                            class="block md:hidden text-lg text-grey-800 font-semibold"
                           >
                             {{ user.username }}</span
                           ></router-link
                         ><span class="hidden md:block">Email</span>
                       </p>
                       <p
-                        class="truncate text-sm font-medium text-grey-800"
+                        class="truncate text-lg font-medium text-grey-800"
                         role="none"
                       >
                         {{ user.email }}
@@ -87,7 +87,7 @@
                           :href="item.href"
                           :class="[
                             active ? 'bg-gray-100' : '',
-                            'block px-4 py-2 text-sm text-gray-700 text-left',
+                            'block px-4 py-2 text-lg text-gray-700 text-left',
                           ]"
                           >{{ item.name }}</a
                         >
@@ -97,7 +97,7 @@
                     <div class="py-1" role="none">
                       <button
                         type="button"
-                        class="block px-4 py-2 hover:bg-peach-500 text-sm text-grey-900 transition-all ease-in-out duration-300 w-full text-left font-semibold"
+                        class="block px-4 py-2 hover:bg-peach-500 text-lg text-grey-900 transition-all ease-in-out duration-300 w-full text-left font-semibold"
                         role="menuitem"
                         tabindex="-1"
                         id="menu-item-3"
@@ -121,7 +121,7 @@
               :key="item.name"
               as="a"
               :href="item.href"
-              class="block rounded-md px-3 py-2 text-base font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100"
+              class="block rounded-md px-3 py-2 text-xl font-medium text-indigo-200 hover:bg-indigo-600 hover:text-indigo-100"
             >
               {{ item.name }}</DisclosureButton
             >

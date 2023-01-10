@@ -8,13 +8,13 @@
         <div class="border-b border-grey-200 px-4 pt-10 pb-6 md:px-7">
           <div class="flex flex-col text-left">
             <h1
-              class="flex-1 text-lg md:text-2.5xl font-semibold leading-none text-black pb-3"
+              class="flex-1 text-lg md:text-5xl font-semibold leading-none text-black pb-3"
             >
               Setup guide
             </h1>
             <div class="flex items-center gap-5">
               <span
-                class="whitespace-nowrap text-sm md:text-base font-normal text-grey-700"
+                class="whitespace-nowrap text-lg md:text-xl font-normal text-grey-700"
                 >1 of 6 tasks complete</span
               >
               <div
@@ -66,7 +66,7 @@
                   <div class="ml-7 flex min-w-0 flex-col space-y-3 pt-2">
                     <h3
                       @click="step.isExpanded = !step.isExpanded"
-                      class="text-sm font-semibold"
+                      class="text-lg font-semibold"
                     >
                       {{ step.title }}
                     </h3>
@@ -74,7 +74,7 @@
                       :class="step.isExpanded ? 'block' : 'hidden'"
                       class="space-y-5"
                     >
-                      <p class="text-md text-grey-800">{{ step.answer }}</p>
+                      <p class="text-xl text-grey-800">{{ step.answer }}</p>
                       <Button @click="consoleClick" class="sm:min-w-40 mt-4" :btn-primary="true">Add customer</Button>
 
                     </div>

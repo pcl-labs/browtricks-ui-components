@@ -49,9 +49,5 @@ defineProps({
     type: Boolean,
     required: true
   },
-  dialogWidth: {
-    type: String,
-    required: false,
-  },
 })
 </script>

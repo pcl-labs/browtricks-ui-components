@@ -4,7 +4,7 @@
       <div
         class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-gray-300"
       >
-        <h2 class="flex-1 text-2.5xl font-bold leading-none text-grey-800 mb-5">
+        <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">
           Settings
         </h2>
         <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
@@ -14,7 +14,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Team Name
                 </h3>
-                <p class="mt-1 text-md text-grey-900">
+                <p class="mt-1 text-xl text-grey-900">
                   The team's name and owner information.
                 </p>
               </div>
@@ -26,7 +26,7 @@
                     <div class="space-y-3">
                       <h6
                         for="company-website"
-                        class="block text-sm text-grey-800 font-medium"
+                        class="block text-lg text-grey-800 font-medium"
                       >
                         Team Owner
                       </h6>
@@ -36,8 +36,8 @@
                           class="rounded-full"
                         />
                         <div class="ml-2">
-                          <h5 class="font-bold text-grey-800 text-sm">Koko</h5>
-                          <p class="text-sm font-medium text-grey-800">
+                          <h5 class="font-bold text-grey-800 text-lg">Koko</h5>
+                          <p class="text-lg font-medium text-grey-800">
                             design.mailboxx@gmail.com
                           </p>
                         </div>
@@ -69,7 +69,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Team Address
                 </h3>
-                <p class="mt-1 text-md text-grey-900">Add team address</p>
+                <p class="mt-1 text-xl text-grey-900">Add team address</p>
               </div>
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
@@ -119,7 +119,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Add Team Member
                 </h3>
-                <p class="mt-1 text-md text-grey-900">
+                <p class="mt-1 text-xl text-grey-900">
                   Add a new team member to your team, allowing them to
                   collaborate with you.
                 </p>
@@ -144,7 +144,7 @@
                       />
                       <label
                         for="administrator"
-                        class="block text-sm text-grey-800"
+                        class="block text-lg text-grey-800"
                       >
                         <b class="block font-semibold">Administrator</b>
                         <span>Administrator users can perform any action.</span>
@@ -157,7 +157,7 @@
                         id="editor"
                         class="relative top-1 text-grey-800 shadow-md border-grey-800 focus:ring-grey-800"
                       />
-                      <label for="editor" class="block text-sm text-grey-800">
+                      <label for="editor" class="block text-lg text-grey-800">
                         <b class="block font-semibold">Editor</b>
                         <span
                           >Editor users have the ability to read, create, and
@@ -185,7 +185,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Connected Socials
                 </h3>
-                <p class="mt-1 text-md text-grey-900">
+                <p class="mt-1 text-xl text-grey-900">
                   Manage and remove your connected accounts.
                 </p>
               </div>
@@ -195,10 +195,10 @@
                 <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="space-y-2">
-                      <h3 class="text-sm font-bold text-grey-800">
+                      <h3 class="text-lg font-bold text-grey-800">
                         Your connected accounts.
                       </h3>
-                      <p class="text-md text-grey-900">
+                      <p class="text-xl text-grey-900">
                         You are free to connect any social accounts to your
                         profile and may remove any connected accounts at any
                         time. If you feel any of your connected accounts have
@@ -334,7 +334,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Create API Token
                 </h3>
-                <p class="mt-1 text-md text-grey-900">
+                <p class="mt-1 text-xl text-grey-900">
                   API tokens aloow third-party services to authentificate with
                   our application on your behalf.
                 </p>
@@ -358,7 +358,7 @@
                         />
                         <label
                           for="create"
-                          class="block text-sm text-grey-800 flex-1"
+                          class="block text-lg text-grey-800 flex-1"
                         >
                           Create
                         </label>
@@ -371,7 +371,7 @@
                         />
                         <label
                           for="read"
-                          class="block text-sm text-grey-800 flex-1"
+                          class="block text-lg text-grey-800 flex-1"
                         >
                           Read
                         </label>
@@ -384,7 +384,7 @@
                         />
                         <label
                           for="delete"
-                          class="block text-sm text-grey-800 flex-1"
+                          class="block text-lg text-grey-800 flex-1"
                         >
                           Delete
                         </label>
@@ -397,7 +397,7 @@
                         />
                         <label
                           for="update"
-                          class="block text-sm text-grey-800 flex-1"
+                          class="block text-lg text-grey-800 flex-1"
                         >
                           Update
                         </label>
@@ -423,7 +423,7 @@
                 <h3 class="text-lg font-semibold leading-6 text-grey-800">
                   Delete Team
                 </h3>
-                <p class="mt-1 text-md text-grey-900">
+                <p class="mt-1 text-xl text-grey-900">
                   Permanently delete this team.
                 </p>
               </div>
@@ -433,7 +433,7 @@
                 <div class="overflow-hidden shadow-3 rounded-lg">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="space-y-2">
-                      <p class="text-md text-grey-900">
+                      <p class="text-xl text-grey-900">
                         Once a team is deleted, all of its resources and data
                         will be permanently deleted. Before deleting this team,
                         please download any data or information regarding this

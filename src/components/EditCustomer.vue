@@ -2,7 +2,7 @@
   <div class="relative flex flex-col min-h-screen w-full">
     <div class="flex-1 p-4 md:p-5 xl:px-14 xl:py-12">
       <div class="space-y-6">
-        <h2 class="flex-1 text-2.5xl font-bold leading-none text-grey-800">
+        <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800">
           Jane Doe Edit Page
         </h2>
         <div class="coverflow-hidden  divide-y divide-grey-300">
@@ -16,7 +16,7 @@
                     <h4 class="text-lg font-bold text-grey-800 leading-none">
                       Media
                     </h4>
-                    <p class="text-sm text-grey-900 leading-tight font-medium">
+                    <p class="text-lg text-grey-900 leading-tight font-medium">
                       This customer does not have<br />
                       any content yet.
                     </p>
@@ -37,7 +37,7 @@
                     </h4>
 
                     <Button @click="consoleClick" :btn-no-border="true" :btn-primary="false"
-                      class=" text-blue hover:text-grey-800 ml-auto md:px-3 -mr-3 text-base w-auto bg-transparent shadow-none">Add custom
+                      class=" text-blue hover:text-grey-800 ml-auto md:px-3 -mr-3 text-xl w-auto bg-transparent shadow-none">Add custom
                       form</Button>
 
                   </div>
@@ -73,7 +73,7 @@
                       <li v-for="(activityItem) in activity" :key="activityItem.id" class="flex gap-x-3 relative">
                         <div class="flex h-4 w-4 items-center justify-center rounded-full bg-peach-500 ring-8 ring-white">
                         </div>
-                        <div class="text-sm text-gray-500 leading-none">
+                        <div class="text-lg text-gray-500 leading-none">
                           <span
                             class="text-xs block font-medium pb-1.5 text-grey-700 leading-none">{{ activityItem.date }}</span>
                           <span class="font-medium text-gray-900">{{ activityItem.store_name ? activityItem.store_name :
@@ -112,10 +112,10 @@
                       Customer
                     </h4>
                     <Button @click="editCustomerDailog = true" :btn-no-border="true" :btn-primary="false"
-                      class="text-blue hover:text-grey-800 md:px-3 ml-auto -mr-3 text-base w-auto bg-transparent shadow-none">Edit</Button>
+                      class="text-blue hover:text-grey-800 md:px-3 ml-auto -mr-3 text-xl w-auto bg-transparent shadow-none">Edit</Button>
                   </div>
                   <div class="customer-details">
-                    <p class="text-base text-gray-500">
+                    <p class="text-xl text-gray-500">
                       Julia Barneby<br />
                       (888) 376-7160<br />
                       juliabarneby@gmail.com
@@ -130,7 +130,7 @@
                     <h4 class="text-lg font-bold text-grey-800 leading-none">
                       Notes
                     </h4>
-                    <p class="text-sm text-grey-900 leading-tight">
+                    <p class="text-lg text-grey-900 leading-tight">
                       No notes about this customer
                     </p>
                   </div>
@@ -154,7 +154,7 @@
   <!-- Add Note dailog -->
   <DialogPopup :open-dialog="addNoteDailog" @closeModal="addNoteDailog = false">
     <div class="space-y-6 relative max-w-full" :style="`width:600px`">
-      <DialogTitle as="h3" class="flex-1 text-2.5xl font-bold leading-none text-grey-800">
+      <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800">
         Add note
       </DialogTitle>
      
@@ -179,7 +179,7 @@
   <DialogPopup :open-dialog="allNotesDailog" @closeModal="allNotesDailog = false">
     <div class="space-y-6 relative max-w-full" :style="`width:600px`">
      
-      <DialogTitle as="h3" class="flex-1 text-2.5xl font-bold leading-none text-grey-800">
+      <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800">
         All notes
       </DialogTitle>
       
@@ -188,7 +188,7 @@
       <li class="py-5">
         <div class="relative flex gap-5 justify-between">
           <div class="max-w-sm"  @click="editNoteDailog = true">
-          <p class="text-sm text-grey-900 font-medium line-clamp-2 cursor-pointer">I am being treated for, or was in the past for the following conditions (Please include allergies, especially to dye, pigment, or numbing agent.)</p>
+          <p class="text-lg text-grey-900 font-medium line-clamp-2 cursor-pointer">I am being treated for, or was in the past for the following conditions (Please include allergies, especially to dye, pigment, or numbing agent.)</p>
           </div>
           <div class="flex items-center">
           <button type="button" class="text-red p-2 rounded hover:bg-red-50 ease-in-out duration-300">
@@ -200,7 +200,7 @@
       <li class="py-5">
         <div class="relative flex gap-5 justify-between">
           <div class="max-w-sm" >
-          <p class="text-sm text-grey-900 font-medium line-clamp-2">Note text about cool new brows note text about cool new browse</p>
+          <p class="text-lg text-grey-900 font-medium line-clamp-2">Note text about cool new brows note text about cool new browse</p>
           </div>
           <div class="flex items-center">
           <button type="button" class="text-red p-2 rounded hover:bg-red-50 ease-in-out duration-300">
@@ -213,7 +213,7 @@
       <li class="py-5">
         <div class="relative flex gap-5 justify-between">
           <div class="max-w-sm">
-          <p class="text-sm text-grey-900 font-medium line-clamp-2">This customer was the best customer ever need to give her discount next time</p>
+          <p class="text-lg text-grey-900 font-medium line-clamp-2">This customer was the best customer ever need to give her discount next time</p>
         </div>
           <div class="flex items-center">
           <button type="button" class="text-red p-2 rounded hover:bg-red-50 ease-in-out duration-300">
@@ -236,7 +236,7 @@
     <div class="space-y-6 relative max-w-full" :style="`width:600px`">
       <div class="space-y-3">
       <button type="button"  @click="editNoteDailog = false" class="flex items-center gap-1 font-medium"><ArrowLeft class="w-4 h-4" /><span>All notes</span></button>
-      <DialogTitle as="h3" class="flex-1 text-2.5xl font-bold leading-none text-grey-800">
+      <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800">
         Edit note
       </DialogTitle>
     </div>
@@ -260,7 +260,7 @@
   <!-- Edit customer -->
   <DialogPopup :open-dialog="editCustomerDailog" @closeModal="editCustomerDailog = false">
     <div class="space-y-6 relative max-w-full" :style="`width:390px`">
-      <DialogTitle as="h3" class="flex-1 text-2.5xl font-bold leading-none text-grey-800">
+      <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800">
         Edit Customer
       </DialogTitle>
              
@@ -295,7 +295,7 @@
       <div class="mx-auto text-center">
         <component :is="RemoveProfile" class="block h-16 w-16 text-grey-900 mx-auto" aria-hidden="true" />
       </div>
-      <DialogTitle as="h3" class="flex-1 text-2.5xl font-bold leading-none text-grey-800 text-center">
+      <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800 text-center">
         Delete Customer
       </DialogTitle>
       <div class="space-y-6 text-center">
