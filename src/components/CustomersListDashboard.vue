@@ -1,16 +1,16 @@
 <template>
-   <div class="relative flex flex-col min-h-screen w-full">
+   <div class="relative flex flex-col w-full flex-1">
     <div v-if="showAddCustomer">
       <!-- <EditCustomer /> -->
       <!-- <AddCustomer /> -->
       <CustomersList />
     </div>
-    <div v-else class="bg-gray-100 px-4 py-3 md:p-5 xl:px-14 xl:py-12"> 
-      <h1 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">               
+    <div v-else class=" px-4 py-3 md:p-5 xl:px-14 xl:py-12 flex-1 flex flex-col"> 
+      <h1 class="text-5xl font-bold leading-none text-grey-800 mb-5">               
         Customers
         </h1>
-      <div class="overflow-hidden rounded-lg shadow-3 bg-white">
-        <div class="setup-guide-area py-20 px-4 lg:p-40">
+      <div class="overflow-hidden rounded-lg shadow-3 bg-white  flex-1 flex justify-center items-center border border-grey-300">
+        <div class="p-10 px-4 ">
           <div class="flex flex-col justify-center text-center space-y-10 max-w-xs mx-auto">
             <div class="relative flex flex-col"><img src="../assets/customer.svg" alt="setup-thumb" class="mx-auto xl:block" /></div>
             <div class="flex flex-col space-y-10">

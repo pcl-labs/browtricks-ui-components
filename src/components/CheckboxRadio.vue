@@ -6,8 +6,8 @@
       :id="id"
       :name="name"    
       :checked="checked"
-      :class="`relative top-1 text-grey-800 shadow-md border-grey-700 focus:ring-grey-800 peer ${inputClasses}`"  @change="$emit('update:modelValue', $event.target.value)">
-<label :for="id" :class="`block text-lg font-normal text-grey-800${labelClasses}`">{{ labelText }}</label>
+      :class="`relative text-peach-500 shadow-md w-5 h-5 border-peach-500 focus:ring-peach-500 peer ${inputClasses}`"  @change="$emit('update:modelValue', $event.target.value)">
+<label :for="id" :class="`block text-lg text-grey-800 ${labelClasses}`">{{ labelText }}</label>
 </div>
  
 </template>

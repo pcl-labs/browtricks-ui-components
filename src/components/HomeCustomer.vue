@@ -1,11 +1,11 @@
 <template>
-  <div class="relative flex flex-col min-h-screen w-full">
+  <div class="relative flex flex-col flex-1 w-full">
     <!-- Setup Guide -->
-    <div class="flex-1 py-3 md:p-5 xl:px-14 xl:py-12">
+    <div class="flex-1 py-3 md:p-5 xl:px-14 xl:py-12 flex flex-col">
       <div
-        class="coverflow-hidden md:rounded-xl bg-white shadow-3 border-y md:border border-grey-300 divide-y divide-grey-300"
-      >
-        <div class="border-b border-grey-200 px-4 pt-10 pb-6 md:px-7">
+        class="coverflow-hidden md:rounded-xl bg-white shadow-3 border-y md:border border-grey-300 divide-y divide-grey-300 flex-1"
+        >
+        <div class="px-4 pt-10 pb-6 md:px-7">
           <div class="flex flex-col text-left">
             <h1
               class="flex-1 text-lg md:text-5xl font-semibold leading-none text-black pb-3"
