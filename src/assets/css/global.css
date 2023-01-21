@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+    @apply overflow-auto !important;
+}
+/* Custom Scrollbar */
+
+.scroll::-webkit-scrollbar {
+    @apply w-2 h-2
+}
+
+.scroll::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full
+}
+
+.on-hover-scroll::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+
+.on-hover-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-none absolute;
+}
+
+.on-hover-scroll::-webkit-scrollbar-thumb {
+    @apply bg-transparent transition-all duration-200 ease-in-out rounded-full;
+}
+
+.on-hover-scroll:hover::-webkit-scrollbar-thumb {
+    @apply bg-black/20;
+}
+ 
+.step-list  li:last-child    .v-line{  @apply hidden  }
+    
+input[type=search]::-webkit-search-cancel-button{
+    @apply appearance-none bg-no-repeat bg-center-center w-4 h-4 mr-0;
+    background-image: url('@/assets/cross-black.svg');
+    background-size: 10px;
+  }
+  
+  [type='checkbox']:checked{
+    background-image: url('@/assets/icons/checkbox-check.svg') !important;
+  }
+  [type='radio']:checked {
+    background-image: url('@/assets/icons/radio-check.svg') !important;
+}

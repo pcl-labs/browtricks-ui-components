@@ -698,7 +698,30 @@
     </div>
   </DialogPopup>
 
-   <!-- Review PMU Form -->
+ <!-- confirm Send PMUform -->
+ <DialogPopup :open-dialog="confirmSendPMUform" @closeModal="confirmSendPMUform = false">
+      <div class="space-y-6 relative max-w-full" :style="`width:300px`">
+        <div class="mx-auto text-center">
+          <component :is="document" class="block h-16 w-16 text-grey-700 mx-auto" aria-hidden="true" />
+        </div>
+        <DialogTitle as="h3" class="flex-1 text-5xl font-bold leading-none text-grey-800 text-center">
+        </DialogTitle>
+        <div class="space-y-6 text-center">
+          <div class="customer-details max-w-60 mx-auto">
+            <p class="text-xl">Send <span class="font-bold">Pre and Post Care Agreement</span> to  <span class="font-bold">Phil Lucus?</span></p>
+          </div>
+          <div class="flex justify-center gap-x-3">
+            <Button @click="$router.push('/pmu'), confirmSendPMUform = false" class="w-auto sm:px-6 " type="button" :btn-outline="true" :btn-primary="false">Yes, Send Forms</Button>
+            <Button @click="confirmSendPMUform = false" class="w-auto sm:px-6 " type="button" :btn-danger="true" :btn-primary="false">Cancel</Button>
+          </div>
+        </div>
+      </div>
+    </DialogPopup>
+
+
+
+
+<!-- Review PMU Form -->
  <DialogPopup
     :open-dialog="reviewPmuForm"
     @closeModal="reviewPmuForm = false"
@@ -711,36 +734,9 @@
       Send PMU Form
       </DialogTitle>
 
-      <form action="#" method="POST">
+      
         <div class="space-y-6">
-          <div class="sm:overflow-hidden sm:rounded-md space-y-3">
-            <table class="w-full text-sm">
-              <tr class="border-b border-grey-300">
-                <th class="py-2 font-semibold text-grey-800">From:</th>
-                <td class="py-2 text-grey-800">paulchrisluke@gmail.com</td>
-              </tr>
-              <tr class="border-b border-grey-300">
-                <th class="py-2 font-semibold text-grey-800">To:</th>
-                <td class="py-2 text-grey-800">juliabarneby@gmail.com</td>
-              </tr>
-              <tr class="border-b border-grey-300">
-                <th class="py-2 font-semibold text-grey-800">Subject:</th>
-                <td class="py-2 text-grey-800">PMU Forms</td>
-              </tr>
-              <tr class="border-b border-grey-300">
-                <th class="py-2 font-semibold text-grey-800">Custom message:</th>
-                <td class="py-2 text-grey-800">please sign these forms</td>
-              </tr>
-            </table>
-
-            <div class="border border-grey-300 max-h-110 overflow-auto on-hover-scroll rounded">
-              <div class="relative flex justify-center items-center">
-            <img class="h-auto object-cover" :src="uploadedPdf" alt="" />
-            </div>
-            </div>
-
-
-          </div>
+          <PmuFormPreview />
           <div class="flex justify-between items-center flex-wrap gap-2">
             <Button
               @click="sandPmuForm = true ; reviewPmuForm = false"
@@ -760,7 +756,7 @@
               >Cancel</Button
             >
             <Button
-              @click="reviewPmuForm = false"
+              @click="confirmSendPMUform = true, reviewPmuForm = false"
               type="button"
               class="w-auto sm:px-6"
               :btn-primary="true"
@@ -770,7 +766,7 @@
           </div>
           </div>
         </div>
-      </form>
+   
     </div>
   </DialogPopup>
 
@@ -779,8 +775,9 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref} from 'vue';
 import DialogPopup from '@/components/DialogPopup.vue';
+import PmuFormPreview from '@/components/PmuFormPreview.vue';
 import RemoveProfile from '@/assets/icons/RemoveProfile.vue';
 import MagnifyingGlassIcon from '@/assets/icons/MagnifyingGlassIcon.vue';
 import trashIcon from '@/assets/icons/trash.vue';
@@ -791,11 +788,11 @@ import Button from '@/components/Button.vue';
 import Textarea from '@/components/Textarea.vue';
 import CheckboxRadio from '@/components/CheckboxRadio.vue';
 import { DialogTitle } from '@headlessui/vue';
-import uploadedPdf from '@/assets/Pre_and_Post_Care_Agreement.png';
 const addNoteDailog = ref(false);
 const allNotesDailog = ref(false);
 const pmuFormList = ref(false);
 const sandPmuForm = ref(false);
+const confirmSendPMUform = ref(false);
 const reviewPmuForm = ref(false);
 const editNoteDailog = ref(false);
 const editCustomerDailog = ref(false);
