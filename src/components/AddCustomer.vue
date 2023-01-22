@@ -16,7 +16,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="overflow-hidden shadow-3 rounded-lg">
+                <div class="overflow-hidden shadow-3 rounded-lg border border-grey-300">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <Input id="firstName" type="text" label-text="First Name" :on-change="handleInput"
                       autocomplete="firstName" placeholder="Julia" />
@@ -41,7 +41,7 @@
             </div>
             <div class="mt-5 md:col-span-2 md:mt-0">
               <form action="#" method="POST">
-                <div class="overflow-hidden shadow-3 rounded-lg">
+                <div class="overflow-hidden shadow-3 rounded-lg border border-grey-300">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <Textarea name="text-note" rows="4" id="textNote" label-text="Note" />
                   </div>

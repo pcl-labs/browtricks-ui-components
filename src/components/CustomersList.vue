@@ -1,7 +1,7 @@
 <template>
-  <div class="relative flex flex-col min-h-screen w-full">
-    <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
-      <div class="flex flex-wrap items-center justify-between mb-7">
+  <div class="relative flex flex-col w-full flex-1">
+    <div class="flex-1 sm:px-3 py-3 md:p-5 xl:px-14 xl:py-12">
+      <div class="flex flex-wrap items-center justify-between mb-7 px-3 sm:px-0">
         <div class="sm:flex-auto">
           <h2 class="text-2xl font-bold text-grey-800 leading-none">
             Customers List
@@ -15,7 +15,7 @@
           >
         </div>
       </div>
-      <div class="overflow-hidden rounded-lg bg-white border border-grey-300 shadow-3">
+      <div class="overflow-hidden sm:rounded-lg bg-white border-y sm:border-x border-grey-300 shadow-3">
         <div class="p-4 pb-0 gap-2 md:gap-5 flex">
           <div class="flex flex-1 gap-2 md:gap-5">
             <div class="relative flex-1">
@@ -101,12 +101,12 @@
 
         <div class="flex-col">
           <div class="overflow-x-auto">
-            <div class="inline-block min-w-full align-middle md:px-0 lg:px-0">
+            <div class="inline-block min-w-full align-middle ">
               <div class="overflow-hidden pt-2">
                 <table
                   class="min-w-full border-0 border-collapse divide-y divide-gray-200"
                 >
-                  <thead class="">
+                  <thead class="hidden sm:table-header-group">
                     <tr>
                       <th
                         scope="col"
@@ -132,22 +132,22 @@
                     <tr
                       v-for="cust in customers"
                       :key="cust.email"
-                      class="odd:bg-white even:bg-grey-100"
+                      class="odd:bg-white even:bg-grey-100 py-2 sm:py-0 block sm:table-row"
                     >
                       <td
-                        class="whitespace-nowrap py-4 pl-4 pr-3 text-lg sm:pl-6 font-normal text-grey-800"
+                        class="whitespace-nowrap py-0.5 sm:py-4 px-3 text-lg sm:pl-6 font-normal text-grey-800 block sm:table-cell"
                       >
                         {{ cust.name }}
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-lg font-normal text-grey-800 text-center"
+                        class="whitespace-nowrap px-3 py-0.5 sm:py-4 text-lg font-normal text-grey-800 sm:text-center block sm:table-cell"
                       >
                        <span class="w-60 max-w-full inline-flex text-left">
                         {{ cust.phone }}
                         </span>
                       </td>
                       <td
-                        class="whitespace-nowrap px-3 py-4 text-lg font-normal text-grey-800"
+                        class="whitespace-nowrap px-3 py-0.5 sm:py-4 text-lg font-normal text-grey-800 block sm:table-cell"
                       >
                         {{ cust.email }}
                       </td>

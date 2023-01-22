@@ -105,7 +105,7 @@
   </Transition>
 
   <!-- Desktop Only -->
-  <div class="flex-col w-70 border-r bordr-grey-500 hidden md:flex">
+  <div class="flex-col w-48 lg:w-70 border-r bordr-grey-500 shrink-0 hidden md:flex">
     <nav class="flex-1 space-y-2 pr-2 py-4 relative " aria-label="Sidebar">
       
         <router-link

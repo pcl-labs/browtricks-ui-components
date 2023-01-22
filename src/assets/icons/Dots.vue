@@ -1,0 +1,10 @@
+<template>
+<svg viewBox="0 0 14 7">
+<rect x="14" width="2" height="2" rx="1" transform="rotate(90 14 0)" fill="#AFA2A2"/>
+<rect x="14" y="5" width="2" height="2" rx="1" transform="rotate(90 14 5)" fill="#AFA2A2"/>
+<rect x="8" width="2" height="2" rx="1" transform="rotate(90 8 0)" fill="#AFA2A2"/>
+<rect x="8" y="5" width="2" height="2" rx="1" transform="rotate(90 8 5)" fill="#AFA2A2"/>
+<rect x="2" width="2" height="2" rx="1" transform="rotate(90 2 0)" fill="#AFA2A2"/>
+<rect x="2" y="5" width="2" height="2" rx="1" transform="rotate(90 2 5)" fill="currentColor"/>
+</svg>
+</template>
