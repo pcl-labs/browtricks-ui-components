@@ -198,9 +198,9 @@ function addOption(type) {
 }
 
 function removeOption(type, index) {
-  if (type === 'checklist') {
+  if (type === 'checklist' && checklistOptions.value.length < 1) {
     checklistOptions.value.splice(index, 1);
-  } else {
+  } else if (type === 'mutliple_choice' && multipleChoiceOptions.value.length < 1) {
     multipleChoiceOptions.value.splice(index, 1);
   }
 }
