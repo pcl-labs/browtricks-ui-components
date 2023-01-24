@@ -23,12 +23,12 @@ module.exports = {
           900: '#4D4646',
         },
         peach: {
-          100:'#EDE9E7',
+          100: '#EDE9E7',
           200: '#baa69d',
           300: '#8c7c76',
-          500: '#E9CFC4', 
+          500: '#E9CFC4',
         },
-        green:'#9AC9B4',
+        green: '#9AC9B4',
         red: {
           DEFAULT: '#D82C0D',
         },
@@ -89,17 +89,17 @@ module.exports = {
       }),
 
       backgroundPosition: {
-				'center-center': "center center ",
-				'center-bottom': "center bottom",
-				'center-top': "center top",
-			},
+        'center-center': 'center center ',
+        'center-bottom': 'center bottom',
+        'center-top': 'center top',
+      },
       boxShadow: {
         1: '0rem 0.563rem 2.75rem rgba(0, 0, 0, 0.06)',
         2: '0rem 1.25rem  1.25rem rgba(0, 0, 0, 0.25)',
         3: '0rem 0.063rem  0.375rem rgba(0, 0, 0, 0.1)',
       },
 
-      fontSize: {        
+      fontSize: {
         xs: '.625rem',
         sm: '.75rem',
         md: '.8125rem',
