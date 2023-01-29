@@ -61,6 +61,49 @@
           </div>
         </div>
       </div>
+
+      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+        <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
+          <div class="md:grid md:grid-cols-3 md:gap-6">
+            <div class="md:col-span-1">
+              <div class="px-4 sm:px-0">
+                <h3 class="text-lg font-semibold leading-6 text-grey-800">
+                  Phone Number
+                </h3>
+                <p class="mt-1 text-xl text-grey-900">
+                  Verify your phone number to receive PMU forms via SMS
+                </p>
+              </div>
+            </div>
+            <div class="mt-5 md:col-span-2 md:mt-0">
+              <form action="#" method="POST">
+                <div class="overflow-hidden shadow-3 rounded-lg border border-grey-300 bg-white">
+                  <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
+                    <div class="relative">
+                      <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                      <div class="relative mt-1 rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 flex items-center border-r border-gray-300 my-2">
+                          <label for="country" class="sr-only">Country</label>
+                          <select id="country" name="country" autocomplete="country" class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            <option>US</option>
+                            <option>CA</option>
+                            <option>EU</option>
+                          </select>
+                        </div>
+                        <input type="text" name="phone-number" id="phone-number" class="block w-full rounded-md border-gray-300 pl-16 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="+1 (555) 987-6543" />
+                      </div>
+                    </div>
+                    <div class="flex justify-end items-center mt-3">
+                      <Button @click="editNoteDailog = false" type="submit" class="w-auto sm:px-6"  :btn-primary="true">Save</Button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="mb-7 pb-7 border-b border-solid border-gray-300">
         <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">

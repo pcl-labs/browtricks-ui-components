@@ -13,9 +13,7 @@ import TopNavbar from '@/components/layout/TopNavbar.vue';
 import SidebarNavigation from '@/components/layout/SidebarNavigation.vue';
 import PMU from '@/views/PmuView.vue';
 import PMUDetails from '@/views/PmuDetailedView.vue';
-import PMUPreview from '@/views/UserViewPmuForm.vue';
 import Media from '@/views/MediaView.vue';
-import SettingsIndex from '@/views/settingsIndex.vue';
 
 const routes = [{
         path: '',
@@ -108,24 +106,11 @@ const routes = [{
         meta: { title: 'BrowTricks | PMU Details' },
     },
     {
-        path: '/user-view-form',
-        name: 'PMUPreview',
-        component: PMUPreview,
-        meta: { title: 'BrowTricks | PMU Preview' },
-    },
-    {
         path: '/media',
         name: 'Media',
         component: Media,
         meta: { title: 'BrowTricks | Media' },
     },
-    ,
-    {
-        path: '/settings-index',
-        name: 'SettingsIndex',
-        component: SettingsIndex,
-        meta: { title: 'BrowTricks | Settings Index ' },
-    }
 ];
 
 const router = createRouter({

@@ -75,6 +75,7 @@
               <div class="relative mt-1 rounded-md shadow-sm">
                 <div class="absolute inset-y-0 left-0 flex items-center">
                   <label for="country" class="sr-only">Country</label>
+               
                   <select
                     id="country"
                     name="country"
@@ -180,6 +181,7 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue';
 import logo from '@/assets/logo-browtricks.png';
 import AppleIcon from '@/assets/icons/Apple.vue';
@@ -189,7 +191,10 @@ import Eye from '@/assets/icons/Eye.vue';
 import EyeOff from '@/assets/icons/EyeOff.vue';
 import Button from '@/components/Button.vue';
 import Input from '@/components/Input.vue';
+ 
 
+ 
 const showPassword = ref(false);
 const showPasswordRptr = ref(false);
+
 </script>
