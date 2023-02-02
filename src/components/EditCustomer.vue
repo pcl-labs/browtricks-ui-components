@@ -39,7 +39,7 @@
               >
                 <div class="p-4 sm:p-8 space-y-3 sm:pt-6 flex-1">
                   <div class="flex items-center relative">
-                    <h4 class="text-lg font-bold text-gray-900 leading-none">
+                    <h4 class="text-lg font-bold text-grey-900 leading-none">
                       PMU Forms
                     </h4>
 
@@ -87,7 +87,7 @@
                     <table class="divide-y divide-grey-300 border-b border-grey-300 w-full">
                       <tr>
                         <th
-                          class="font-medium text-gray-900 text-left pb-2"
+                          class="font-medium text-grey-900 text-left pb-2"
                           col-span="2"
                         >
                           Forms
@@ -138,7 +138,7 @@
               >
                 <div class="p-4 sm:p-8 space-y-6 flex-1">
                   <div class="flex">
-                    <p class="text-lg font-bold text-gray-900 leading-none">
+                    <p class="text-lg font-bold text-grey-900 leading-none">
                       PMU Form Timeline
                     </p>
                   </div>
@@ -156,12 +156,12 @@
                         <div
                           class="flex h-4 w-4 items-center justify-center rounded-full bg-peach-500 ring-8 ring-white"
                         ></div>
-                        <div class="text-lg text-gray-500 leading-none">
+                        <div class="text-lg text-grey-500 leading-none">
                           <span
                             class="text-xs block font-medium pb-1.5 text-grey-700 leading-none"
                             >{{ activityItem.date }}</span
                           >
-                          <span class="font-medium text-gray-900">{{
+                          <span class="font-medium text-grey-900">{{
                             activityItem.store_name
                               ? activityItem.store_name
                               : activityItem.cust_name
@@ -172,7 +172,7 @@
                           </template>
                           <template v-else> signed </template>
                           {{ ' ' }}
-                          <span class="font-medium text-gray-900">{{
+                          <span class="font-medium text-grey-900">{{
                             activityItem.form_name
                           }}</span>
                         </div>
@@ -198,7 +198,7 @@
               <div class="overflow-hidden shadow-3 rounded-lg bg-white">
                 <div class="p-4 px-8 space-y-2">
                   <div class="flex items-center relative">
-                    <h4 class="text-lg font-bold text-gray-900 leading-none">
+                    <h4 class="text-lg font-bold text-grey-900 leading-none">
                       Customer
                     </h4>
                     <Button
@@ -210,7 +210,7 @@
                     >
                   </div>
                   <div class="customer-details">
-                    <p class="text-xl text-gray-500">
+                    <p class="text-xl text-grey-500">
                       Julia Barneby<br />
                       (888) 376-7160<br />
                       juliabarneby@gmail.com
@@ -308,7 +308,7 @@
       </DialogTitle>
 
       <div class="mt-6 flow-root">
-        <ul role="list" class="-my-5 divide-y divide-gray-200">
+        <ul role="list" class="-my-5 divide-y divide-grey-200">
           <li class="py-5">
             <div class="relative flex gap-5 justify-between">
               <div class="max-w-sm" @click="editNoteDailog = true">

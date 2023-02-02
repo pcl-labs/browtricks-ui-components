@@ -46,8 +46,8 @@
                             <MenuItem v-slot="{ active }">
                             <button :class="[
                               active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
+                                ? 'bg-grey-100 text-grey-900'
+                                : 'text-grey-700',
                               'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                             ]" @click="isEditCustomer = true">
                             Edit customer information
@@ -56,7 +56,7 @@
                             <MenuItem v-slot="{ active }">
                             <button :class="[
                               active
-                                ? 'bg-gray-100 text-red'
+                                ? 'bg-grey-100 text-red'
                                 : 'text-red',
                               'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                             ]">

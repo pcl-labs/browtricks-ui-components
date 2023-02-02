@@ -2,7 +2,7 @@
     <div class="relative flex flex-col flex-1 w-full">
       <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12 flex flex-col">
          <!-- Team owner -->
-        <div class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-gray-300" >
+        <div class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-grey-300" >
           <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">
             Settings
           </h2>
@@ -57,7 +57,7 @@
           </div>
         </div>
         <!-- Phone number -->
-        <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+        <div class="mb-7 pb-7 border-b border-solid border-grey-300">
           <div class="coverflow-hidden divide-y divide-grey-300">
             <div class="md:grid md:grid-cols-3 md:gap-6">
               <div class="md:col-span-1">
@@ -89,7 +89,7 @@
           </div>
         </div>
         <!-- Team address -->
-        <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+        <div class="mb-7 pb-7 border-b border-solid border-grey-300">
           <div class="coverflow-hidden divide-y divide-grey-300">
             <div class="md:grid md:grid-cols-3 md:gap-6">
               <div class="md:col-span-1">

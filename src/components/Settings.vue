@@ -2,9 +2,9 @@
   <div class="relative flex flex-col flex-1 w-full">
     <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12 flex flex-col">
       <div
-        class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-gray-300"
+        class="mb-7 pt-3 md:pt-0 md:pb-7 border-b border-solid border-grey-300"
       >
-        <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mb-5">
+        <h2 class="flex-1 text-3xl sm:text-5xl font-bold leading-none text-grey-800 mb-5">
           Settings
         </h2>
         <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
@@ -62,7 +62,7 @@
         </div>
       </div>
 
-      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+      <div class="mb-7 pb-7 border-b border-solid border-grey-300">
         <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
@@ -80,17 +80,17 @@
                 <div class="overflow-hidden shadow-3 rounded-lg border border-grey-300 bg-white">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
                     <div class="relative">
-                      <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                      <label for="phone-number" class="block text-sm font-medium text-grey-700">Phone Number</label>
                       <div class="relative mt-1 rounded-md shadow-sm">
-                        <div class="absolute inset-y-0 left-0 flex items-center border-r border-gray-300 my-2">
+                        <div class="absolute inset-y-0 left-0 flex items-center border-r border-grey-300 my-2">
                           <label for="country" class="sr-only">Country</label>
-                          <select id="country" name="country" autocomplete="country" class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                          <select id="country" name="country" autocomplete="country" class="h-full rounded-md border-transparent bg-transparent py-0 pl-3 pr-7 text-grey-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             <option>US</option>
                             <option>CA</option>
                             <option>EU</option>
                           </select>
                         </div>
-                        <input type="text" name="phone-number" id="phone-number" class="block w-full rounded-md border-gray-300 pl-16 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="+1 (555) 987-6543" />
+                        <input type="text" name="phone-number" id="phone-number" class="block w-full rounded-md border-grey-300 pl-16 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="+1 (555) 987-6543" />
                       </div>
                     </div>
                     <div class="flex justify-end items-center mt-3">
@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+      <div class="mb-7 pb-7 border-b border-solid border-grey-300">
         <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
@@ -154,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+      <div class="mb-7 pb-7 border-b border-solid border-grey-300">
         <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
@@ -205,7 +205,7 @@
         </div>
       </div>
 
-      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+      <div class="mb-7 pb-7 border-b border-solid border-grey-300">
         <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">
@@ -245,7 +245,7 @@
                               </div>
                               <div class="space-y-1">
                                 <h3 class="font-bold text-grey-800">Google</h3>
-                                <p class="text-gray-500 leadiing-none">
+                                <p class="text-grey-500 leadiing-none">
                                   Not connected.
                                 </p>
                               </div>
@@ -269,7 +269,7 @@
                                 <h3 class="font-bold text-grey-800">
                                   Facebook
                                 </h3>
-                                <p class="text-gray-500 leadiing-none">
+                                <p class="text-grey-500 leadiing-none">
                                   Not connected.
                                 </p>
                               </div>
@@ -289,14 +289,14 @@
                               </div>
                               <div class="space-y-1">
                                 <h3 class="font-bold text-grey-800">Twitter</h3>
-                                <p class="text-gray-500 leadiing-none">
+                                <p class="text-grey-500 leadiing-none">
                                   Connected 1 day ago.
                                 </p>
                               </div>
                             </div>
                           </td>
                           <td class="text-right">
-                            <p class="text-gray-500 leadiing-none">
+                            <p class="text-grey-500 leadiing-none">
                               Use Avatar as Profile Photo
                             </p>
                           </td>
@@ -312,7 +312,7 @@
                                 <h3 class="font-bold text-grey-800">
                                   Instagram
                                 </h3>
-                                <p class="text-gray-500 leadiing-none">
+                                <p class="text-grey-500 leadiing-none">
                                   Not connected.
                                 </p>
                               </div>
@@ -332,7 +332,7 @@
                               </div>
                               <div class="space-y-1">
                                 <h3 class="font-bold text-grey-800">Tiktok</h3>
-                                <p class="text-gray-500 leadiing-none">
+                                <p class="text-grey-500 leadiing-none">
                                   Not connected.
                                 </p>
                               </div>
@@ -354,7 +354,7 @@
         </div>
       </div>
 
-      <div class="mb-7 pb-7 border-b border-solid border-gray-300">
+      <div class="mb-7 pb-7 border-b border-solid border-grey-300">
         <div class="coverflow-hidden rounded-xl divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-1">

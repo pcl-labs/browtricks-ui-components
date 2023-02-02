@@ -331,7 +331,7 @@
             </div>
             <a
               href="javascript:void(0)"
-              class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9"
+              class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9"
             >
               <LinkChain class="w-4 h-4" />
             </a>

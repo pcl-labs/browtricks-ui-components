@@ -26,7 +26,7 @@
               </div>
               <div class="flex flex-col space-y-10">
                 <div class="space-y-4">
-                  <h2 class="text-3xl font-bold text-grey-800 leading-none">Setup onboarding PMU forms</h2>
+                  <h2 class="text-3xl sm:text-4xl font-bold text-grey-800 leading-none">Setup onboarding PMU forms</h2>
                   <p class="text-xl text-grey-900 sm:px-5"> Customers can sign your PMU forms before arriving for treatment. Select from our prebuilt PMU form templates, or create your own. </p>
                 </div>
                 <div class="flex flex-wrap gap-3 w-full justify-center">

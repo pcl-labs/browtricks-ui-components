@@ -36,17 +36,17 @@
         </div>
         <div class="relative w-full">
           <div class="absolute inset-0 flex items-center">
-            <div class="w-full h-px bg-gray-300"></div>
+            <div class="w-full h-px bg-grey-300"></div>
           </div>
           <div class="relative flex justify-center text-lg">
-            <span class="bg-grey-200 px-4 text-gray-900 font-bold">OR</span>
+            <span class="bg-grey-200 px-4 text-grey-900 font-bold">OR</span>
           </div>
         </div>
         <div
           class="bg-white p-5 xs:rounded-lg sm:p-8 border-y xs:border border-grey-500 shadow-3 w-full"
         >
           <h2
-            class="text-start text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 pb-5"
+            class="text-start text-3xl sm:text-5xl font-bold tracking-tight text-grey-900 pb-5"
           >
             Create an Account
           </h2>
@@ -75,7 +75,6 @@
               <div class="relative mt-1 rounded-md shadow-sm">
                 <div class="absolute inset-y-0 left-0 flex items-center">
                   <label for="country" class="sr-only">Country</label>
-               
                   <select
                     id="country"
                     name="country"
@@ -181,7 +180,6 @@
 </template>
 
 <script setup>
-
 import { ref } from 'vue';
 import logo from '@/assets/logo-browtricks.png';
 import AppleIcon from '@/assets/icons/Apple.vue';
@@ -191,10 +189,7 @@ import Eye from '@/assets/icons/Eye.vue';
 import EyeOff from '@/assets/icons/EyeOff.vue';
 import Button from '@/components/Button.vue';
 import Input from '@/components/Input.vue';
- 
 
- 
 const showPassword = ref(false);
 const showPasswordRptr = ref(false);
-
 </script>

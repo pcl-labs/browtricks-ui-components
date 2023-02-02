@@ -39,8 +39,8 @@
           >
             <li
               :class="[
-                active ? 'text-grey-800 bg-gray-100' : 'text-grey-800',
-                selected ? 'text-grey-800 bg-gray-100' : 'text-grey-800',
+                active ? 'text-grey-800 bg-grey-100' : 'text-grey-800',
+                selected ? 'text-grey-800 bg-grey-100' : 'text-grey-800',
               ]"
               class="relative cursor-default select-none py-2 pl-3 pr-9"
             >

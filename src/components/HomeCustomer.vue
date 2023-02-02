@@ -18,12 +18,12 @@
                 >1 of 6 tasks complete</span
               >
               <div
-                class="w-full bg-grey-300 rounded-full h-1.5 dark:bg-gray-700"
+                class="w-full bg-grey-300 rounded-full h-1.5 dark:bg-grey-700"
               >
                 <div
                   class="bg-grey-700 h-1.5 rounded-full dark:bg-blue-500"
-                  style="
-                    width: 20%; /*width: index / ${setupCount} * 100 + '%'*/
+                  style="width: 20%;
+                    /*width: index / ${setupCount} * 100 + '%'*/
                   "
                 ></div>
                 <!-- Step count % formulla `index / ${setupCount} * 100 + '%'` -->
@@ -38,7 +38,6 @@
               <li
                 v-for="(step, index) in customerSteps"
                 :key="index"
-                :class="step.isExpanded ? 'open' : 'close'"
                 class="text-left relative pb-10"
               >
                 <div
@@ -49,15 +48,74 @@
                 <a href="#" class="group relative flex items-start">
                   <span class="flex h-9 items-center">
                     <span
-                      class="relative left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
+                      class="relative left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white bg-white border-2 border-dashed  border-peach-500"
+                    >
+                    </span>
+                    <span v-if="isCustomerAdded && step.title === 'Add customers'"
+                      class="absolute left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
                       :class="
-                        step.isExpanded
+                      isCustomerAdded
                           ? 'bg-peach-500'
                           : 'bg-white border-2 border-dashed  border-peach-500 '
                       "
                     >
                       <CheckIcon
-                        v-if="step.isExpanded"
+                        class="h-4 w-4 text-grey-800"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span
+                      v-if="isCreateForm && step.title === 'Create forms'"
+                      class="absolute left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
+                      :class="
+                      isCreateForm
+                          ? 'bg-peach-500'
+                          : 'bg-white border-2 border-dashed  border-peach-500 '
+                      "
+                    >
+                      <CheckIcon
+                        class="h-4 w-4 text-grey-800"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span
+                      v-if="isAccountConnected && step.title === 'Connect social accounts'"
+                      class="absolute left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
+                      :class="
+                      isAccountConnected
+                          ? 'bg-peach-500'
+                          : 'bg-white border-2 border-dashed  border-peach-500 '
+                      "
+                    >
+                      <CheckIcon
+                        class="h-4 w-4 text-grey-800"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span
+                      v-if="isMediaAdded && step.title === 'Add before/after media'"
+                      class="absolute left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
+                      :class="
+                      isMediaAdded
+                          ? 'bg-peach-500'
+                          : 'bg-white border-2 border-dashed  border-peach-500 '
+                      "
+                    >
+                      <CheckIcon
+                        class="h-4 w-4 text-grey-800"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span
+                      v-if="isEnableSMS && step.title === 'Enable SMS sending'"
+                      class="absolute left-1 z-10 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white"
+                      :class="
+                      isEnableSMS
+                          ? 'bg-peach-500'
+                          : 'bg-white border-2 border-dashed  border-peach-500 '
+                      "
+                    >
+                      <CheckIcon
                         class="h-4 w-4 text-grey-800"
                         aria-hidden="true"
                       />
@@ -65,7 +123,7 @@
                   </span>
                   <div class="ml-7 flex min-w-0 flex-col space-y-3 pt-2">
                     <h3
-                      @click="step.isExpanded = !step.isExpanded"
+                      @click="activeStep(index, step)"
                       class="text-lg font-semibold"
                     >
                       {{ step.title }}
@@ -98,9 +156,15 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import CheckIcon from '@/assets/icons/CheckIcon.vue';
 import Button from '@/components/Button.vue';
+
+let isCustomerAdded = ref(true);
+let isCreateForm = ref(false);
+let isAccountConnected = ref(false);
+let isMediaAdded = ref(false);
+let isEnableSMS = ref(false);
 // Setup Guide data
 const customerSteps = reactive([
   {
@@ -134,4 +198,27 @@ const customerSteps = reactive([
     isExpanded: false,
   },
 ]);
+
+// Open clicked only step
+function activeStep(event, stp) {
+  customerSteps.map((pr) => {
+    pr.isExpanded = false;
+    if(stp.title === 'Add customers') {
+      isCustomerAdded = true;
+    }
+    if(stp.title === 'Create forms') {
+      isCreateForm = true;
+    }
+    if(stp.title === 'Connect social accounts') {
+      isAccountConnected = true;
+    }
+    if(stp.title === 'Add before/after media') {
+      isMediaAdded = true;
+    }
+    if(stp.title === 'Enable SMS sending') {
+      isEnableSMS = true;
+    }
+  })
+  return customerSteps[event].isExpanded = true;
+}
 </script>
