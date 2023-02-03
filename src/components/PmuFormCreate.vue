@@ -101,8 +101,8 @@
         item-key="key"
         :list="questions"
       >
-        <template #item>
-          <QuestionBuilder />
+        <template #item="{ index }">
+          <QuestionBuilder @delete-question="removeQuestion(index)" />
         </template>
       </Sortable>
       <!-- End Questions area -->
@@ -203,7 +203,7 @@
   >
     <div class="p-1.5 flex xs:flex-col gap-2">
       <Button
-        @click="questions++"
+        @click="addQuestion"
         class="text-grey-700 hover:bg-red/10 px-2 flex items-center justify-end"
         :btn-no-border="true"
         :btn-primary="false"
@@ -242,5 +242,14 @@ const moreQuestions = ref(0);
 const isMoreQuestions = ref(false);
 const isUploadDocument = ref(false);
 
-const questions = ref([{ key: 1 }, { key: 2 }]);
+const questions = ref([{ key: 1 }]);
+
+function addQuestion() {
+  let lastKey = questions.value[questions.value.length - 1].key;
+  questions.value.push({ key: lastKey++ });
+}
+
+function removeQuestion(index) {
+  questions.value.splice(index, 1);
+}
 </script>

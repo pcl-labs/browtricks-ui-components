@@ -113,6 +113,7 @@
             </div>
             <div class="mt-auto flex justify-start sm:justify-end">
               <button
+                @click="$emit('delete-question')"
                 class="text-red hover:bg-red/10 px-2 gap-x-1.5 inline-flex items-center justify-end"
                 :btn-no-border="true"
                 :btn-primary="false"
