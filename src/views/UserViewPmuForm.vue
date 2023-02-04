@@ -130,15 +130,18 @@
           <h5 class="block text-lg font-semibold text-grey-800">Sign here:</h5>
           <div class="flex flex-col md:flex-row items-center gap-x-10 gap-y-5 w-full md:w-2/5">
             <div class="space-y-4 w-full">
-              <div class="overflow-hidden rounded-xl bg-transparent border border-grey-300 w-full md:w-60">
-                <div class="space-y-3 px-12 py-16 flex flex-wrap justify-center items-center text-center w-full">
-                  <div class="flex flex-col gap-2">
-                    <div class="flex justify-center items-center">
-                      <file-select v-model="file"></file-select>
-                    </div>
-                    <p v-if="file">{{ file.name }}</p>
-                    <p class="text-xs text-grey-800/80">Upload your signature</p>
+              <div class="overflow-hidden rounded-xl bg-transparent border border-grey-300 w-full">
+                <div class="space-y-3  flex flex-wrap justify-center items-center text-center w-full">
+                  <div class="flex justify-center items-center">
+                    <!-- <file-select v-model="file"></file-select> -->
+                    <!-- Start Signature pad -->                  
+                    
+                        <SignaturePad v-model="canvas" />
+                    
+                    <!-- End of Signature pad -->
+
                   </div>
+                  <p v-if="file">{{ file.name }}</p>
                   <!-- <Signature class="w-40 h-16 block" /> -->
                 </div>
               </div>
@@ -159,22 +162,10 @@
             </div>
           </div>
           <div class="flex gap-3 pt-6 md:pt-3.5">
-            <Button
-              type="submit"
-              :btn-outline="true"
-              :btn-primary="false"
-              @click="isMoreForm = true"
-              class="w-auto sm:px-6"
-              >Undo</Button
-            >
-            <Button
-              type="submit"
-              :btn-outline="true"
-              :btn-primary="false"
-              @click="isMoreForm = true"
-              class="w-auto sm:px-6"
-              >Save signature</Button
-            >
+            <Button type="submit" :btn-outline="true" :btn-primary="false" @click="canvas = null"
+              class="w-auto sm:px-6">Undo</Button>
+            <Button type="submit" :btn-outline="true" :btn-primary="false" @click="saveSign"
+              class="w-auto sm:px-6">Save signature</Button>
           </div>
         </div>
         <div class="flex flex-col px-4 md:px-0">
@@ -192,6 +183,7 @@
 </template>
 
 <script setup>
+// import { VueSignaturePad } from 'vue-signature-pad';
 import { reactive, ref } from 'vue';
 import TopNavbar from '@/components/layout/TopNavbar.vue';
 import SidebarNavigation from '@/components/layout/SidebarNavigation.vue';
@@ -201,6 +193,9 @@ import Signature from '@/assets/icons/Signature.vue';
 import Button from '@/components/Button.vue';
 import FileSelect from '@/components/FileSelect.vue';
 // import PmuDetails from '@/components/PmuDetails.vue';
+import SignaturePad from '@/components/SignaturePad.vue';
 
 const isLogin = reactive(true);
+let canvas = ref(null);
+
 </script>
