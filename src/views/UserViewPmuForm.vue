@@ -133,16 +133,21 @@
               <div class="overflow-hidden rounded-xl bg-transparent border border-grey-300 w-full">
                 <div class="space-y-3  flex flex-wrap justify-center items-center text-center w-full">
                   <div class="flex justify-center items-center">
-                    <!-- <file-select v-model="file"></file-select> -->
-                    <!-- Start Signature pad -->                  
-                    
-                        <SignaturePad v-model="canvas" />
-                    
+                    <!-- Start Signature pad -->
+                    <div class="sign-wrapper relative bg-white">
+                      <!-- <SignaturePad /> -->
+                      <VueSignaturePad
+                        id="signature" class="w-full h-72"
+                         
+                        ref="signaturePad"
+                        :options="options"
+                      />
+                    </div>
                     <!-- End of Signature pad -->
 
                   </div>
-                  <p v-if="file">{{ file.name }}</p>
-                  <!-- <Signature class="w-40 h-16 block" /> -->
+                  
+                
                 </div>
               </div>
             </div>
@@ -162,7 +167,7 @@
             </div>
           </div>
           <div class="flex gap-3 pt-6 md:pt-3.5">
-            <Button type="submit" :btn-outline="true" :btn-primary="false" @click="canvas = null"
+            <Button type="submit" :btn-outline="true" :btn-primary="false" @click="undoSign"
               class="w-auto sm:px-6">Undo</Button>
             <Button type="submit" :btn-outline="true" :btn-primary="false" @click="saveSign"
               class="w-auto sm:px-6">Save signature</Button>
@@ -181,21 +186,43 @@
     </div>
   </div>
 </template>
+ 
 
-<script setup>
-// import { VueSignaturePad } from 'vue-signature-pad';
-import { reactive, ref } from 'vue';
+<script>
 import TopNavbar from '@/components/layout/TopNavbar.vue';
 import SidebarNavigation from '@/components/layout/SidebarNavigation.vue';
 import CheckboxRadio from '@/components/CheckboxRadio.vue';
 import Textarea from '@/components/Textarea.vue';
 import Signature from '@/assets/icons/Signature.vue';
 import Button from '@/components/Button.vue';
-import FileSelect from '@/components/FileSelect.vue';
-// import PmuDetails from '@/components/PmuDetails.vue';
-import SignaturePad from '@/components/SignaturePad.vue';
 
-const isLogin = reactive(true);
-let canvas = ref(null);
+export default {
+  components: {
+    TopNavbar,
+    SidebarNavigation,
+    CheckboxRadio,
+    Textarea,
+    Signature,
+    Button
+  },
+  data: () => ({
+    options: {
+      penColor: "#000",
+    },
+  }),
+  methods: {
+    undoSign() {
+      this.$refs.signaturePad.undoSignature();
+    },
+    saveSign() {
+      const { isEmpty, data } = this.$refs.signaturePad.saveSignature();
 
+      alert("Open DevTools see the save data.");
+      console.log(isEmpty);
+      console.log(data);
+    }
+  },
+};
 </script>
+
+ 
