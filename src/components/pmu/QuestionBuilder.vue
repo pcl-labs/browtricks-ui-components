@@ -2,7 +2,7 @@
   <div class="relative rounded-lg shadow-3 border border-grey-300 bg-white mb-6">
     <img
       src="@/assets/icons/move-icon.svg"
-      class="absolute top-2 left-0 right-0 mx-auto hover:cursor-move"
+      class="handle absolute top-2 left-0 right-0 mx-auto hover:cursor-move"
     />
     <div class="setup-guide-area p-4 lg:py-6 lg:px-8">
       <div class="md:grid md:grid-cols-12 gap-5 xl:gap-10 2xl:gap-20 flex flex-col">

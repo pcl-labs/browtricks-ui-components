@@ -99,6 +99,7 @@
       <!-- Start Question area -->
       <Sortable
         item-key="key"
+        :options="{ handle: '.handle' }"
         :list="questions"
       >
         <template #item="{ index }">
@@ -245,8 +246,9 @@ const isUploadDocument = ref(false);
 const questions = ref([{ key: 1 }]);
 
 function addQuestion() {
-  let lastKey = questions.value[questions.value.length - 1].key;
-  questions.value.push({ key: lastKey++ });
+  let lastKey = questions.value[questions.value.length - 1]?.key;
+  lastKey = lastKey === null ? 1 : lastKey++;
+  questions.value.push({ key: lastKey });
 }
 
 function removeQuestion(index) {
