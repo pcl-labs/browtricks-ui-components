@@ -34,7 +34,7 @@
                 >
                   <button
                     type="button"
-                    class="hover:text-gray-500 focus:outline-none outline-none cursor-pointer absolute top-2.5 -left-12 hover:bg-red text-white p-2 rounded ease-in-out duration-300"
+                    class="hover:text-grey-500 focus:outline-none outline-none cursor-pointer absolute top-2.5 -left-12 hover:bg-red text-white p-2 rounded ease-in-out duration-300"
                     @click="$emit('closeModal')"
                   >
                     <span class="sr-only">Close panel</span>
@@ -48,7 +48,7 @@
                     class="relative flex-1 w-full space-y-5 px-2 py-2 max-h-full overflow-y-auto overflow-x-hidden on-hover-scroll"
                   >
                     <div class="space-y-5">
-                      <DialogTitle class="text-lg font-semibold text-gray-800">{{dialogTitle}}</DialogTitle>
+                      <DialogTitle class="text-lg font-semibold text-grey-800">{{dialogTitle}}</DialogTitle>
                       <!-- Slideoover contents -->
                       <div class="slideover-contents">
                         <slot></slot>

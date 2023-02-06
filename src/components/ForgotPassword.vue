@@ -20,12 +20,12 @@
           <form class="space-y-4" action="#" method="POST">
             <div class="flex flex-col space-y-3">
               <h2
-                class="text-start text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-none"
+                class="text-start text-3xl sm:text-5xl font-bold tracking-tight text-grey-900 leading-none"
               >
                 Forgot Password
               </h2>
               <p
-                class="text-start text-xl font-normal text-gray-500 leading-snug"
+                class="text-start text-xl font-normal text-grey-500 leading-snug"
               >
                 Enter your registered email address to receive password reset
                 instructions.

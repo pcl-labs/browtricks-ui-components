@@ -3,7 +3,7 @@
     <div class="flex-1 py-3 md:p-5 xl:px-14 xl:py-12 flex flex-col ">
       <div class="space-y-6 pt-3 md:pt-0 flex flex-col flex-1">
         <div class="flex items-center px-3 md:px-0">
-          <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 mr-auto">Media</h2>
+          <h2 class="flex-1 text-3xl sm:text-5xl font-bold leading-none text-grey-800 mr-auto">Media</h2>
           <div class="flex gap-2">
             <!-- Start
                 Just for demo purpose to see how alert gets open -->
@@ -24,7 +24,7 @@
                   class="mx-auto xl:block" /></div>
               <div class="flex flex-col space-y-5">
                 <div class="space-y-4">
-                  <h2 class="text-2xl font-bold text-grey-800 leading-none">Add Media</h2>
+                  <h2 class="text-3xl sm:text-4xl font-bold text-grey-800 leading-none">Add Media</h2>
                   <p class="text-xl text-grey-900">Featuring customer content is a great way to build a community around
                     your products and your brand. You can import directly from social media posts or add your own
                     manually.
@@ -79,8 +79,8 @@
                         <MenuItem v-slot="{ active }">
                         <button :class="[
                           active
-                            ? 'bg-gray-100 text-gray-900'
-                            : 'text-gray-700',
+                            ? 'bg-grey-100 text-grey-900'
+                            : 'text-grey-700',
                           'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                         ]">
                           A-Z
@@ -89,8 +89,8 @@
                         <MenuItem v-slot="{ active }">
                         <button :class="[
                           active
-                            ? 'bg-gray-100 text-gray-900'
-                            : 'text-gray-700',
+                            ? 'bg-grey-100 text-grey-900'
+                            : 'text-grey-700',
                           'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                         ]">
                           Z-A
@@ -109,7 +109,7 @@
                 <div class="overflow-hidden">
                   <div class="inline-block min-w-full align-middle md:px-0 lg:px-0">
                     <div class="overflow-hidden pt-2">
-                      <table class="min-w-full border-0 border-collapse divide-y divide-gray-200">
+                      <table class="min-w-full border-0 border-collapse divide-y divide-grey-200">
                         <thead class="hidden sm:table-header-group">
                           <tr>
                             <th scope="col"
@@ -127,7 +127,7 @@
                             </th>
                           </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-200 bg-white">
+                        <tbody class="divide-y divide-grey-200 bg-white">
                           <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true"
                             class="odd:bg-white even:bg-grey-100">
                             <td class="whitespace-nowrap p-3 pl-4 text-lg sm:pl-6">
@@ -155,12 +155,12 @@
                             </td>
                             <td class="text-center">
                               <a href="javascript:void(0)"
-                                class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
+                                class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
                                 <LinkChain class="w-4 h-4" />
                               </a>
                             </td>
                             <td
-                              class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-gray-500 hidden sm:table-cell">
+                              class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-grey-500 hidden sm:table-cell">
                               {{ cust.date_added }}
                             </td>
                           </tr>
@@ -171,7 +171,7 @@
                 </div>
               </div>
             </div>
-            <nav class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+            <nav class="flex items-center justify-between border-t border-grey-200 bg-white px-4 py-3 sm:px-6"
               aria-label="Pagination">
               <div class="flex flex-1 justify-start items-center gap-2">
                 <a href="#"
@@ -233,7 +233,7 @@
               </p>
             </div>
             <a href="javascript:void(0)"
-              class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
+              class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
               <LinkChain class="w-4 h-4" />
             </a>
           </div>
@@ -268,7 +268,7 @@
                 :displayValue="(person) => person.name" placeholder="Start typing customer name"
                 @change="query = $event.target.value" />
               <ComboboxButton class="absolute inset-y-0 right-0 flex items-center pr-2">
-                <ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="			true" />
+                <ChevronUpDownIcon class="h-5 w-5 text-grey-400" aria-hidden="			true" />
               </ComboboxButton>
             </div>
             <TransitionRoot leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0"
@@ -277,7 +277,7 @@
                 class="absolute z-10 mt-1 max-h-40 w-full on-hover-scroll overflow-auto rounded-md bg-white py-1 text-xl shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-lg">
                 <div v-if="
                   filteredPeople.length === 0 && query !== ''
-                " class="relative cursor-default select-none py-2 px-4 text-gray-700">
+                " class="relative cursor-default select-none py-2 px-4 text-grey-700">
                   Nothing found.
                 </div>
 
@@ -285,7 +285,7 @@
                   v-slot="{ selected, active }">
                   <li class="relative cursor-default select-none py-2 pl-10 pr-4" :class="{
                     'bg-grey-200 text-grey-800': active,
-                    'text-gray-900': !active,
+                    'text-grey-900': !active,
                   }">
                     <span class="block truncate" :class="{
                       'font-medium': selected,

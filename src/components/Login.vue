@@ -36,10 +36,10 @@
         </div>
         <div class="relative w-full">
           <div class="absolute inset-0 flex items-center">
-            <div class="w-full h-px bg-gray-300"></div>
+            <div class="w-full h-px bg-grey-300"></div>
           </div>
           <div class="relative flex justify-center text-lg">
-            <span class="bg-grey-200 px-4 text-gray-900 font-bold">OR</span>
+            <span class="bg-grey-200 px-4 text-grey-900 font-bold">OR</span>
           </div>
         </div>
         <div

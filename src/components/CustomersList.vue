@@ -71,8 +71,8 @@
                         <button
                           :class="[
                             active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700',
+                              ? 'bg-grey-100 text-grey-900'
+                              : 'text-grey-700',
                             'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                           ]"
                         >
@@ -83,8 +83,8 @@
                         <button
                           :class="[
                             active
-                              ? 'bg-gray-100 text-gray-900'
-                              : 'text-gray-700',
+                              ? 'bg-grey-100 text-grey-900'
+                              : 'text-grey-700',
                             'block px-4 py-2 text-lg text-left ease-in-out duration-300 w-full',
                           ]"
                         >
@@ -104,7 +104,7 @@
             <div class="inline-block min-w-full align-middle ">
               <div class="overflow-hidden pt-2">
                 <table
-                  class="min-w-full border-0 border-collapse divide-y divide-gray-200"
+                  class="min-w-full border-0 border-collapse divide-y divide-grey-200"
                 >
                   <thead class="hidden sm:table-header-group">
                     <tr>
@@ -128,7 +128,7 @@
                       </th>
                     </tr>
                   </thead>
-                  <tbody class="divide-y divide-gray-200 bg-white">
+                  <tbody class="divide-y divide-grey-200 bg-white">
                     <tr
                       v-for="cust in customers"
                       :key="cust.email"
@@ -159,7 +159,7 @@
           </div>
 
           <nav
-            class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+            class="flex items-center justify-between border-t border-grey-200 bg-white px-4 py-3 sm:px-6"
             aria-label="Pagination"
           >
             <div class="flex flex-1 justify-start items-center gap-2">

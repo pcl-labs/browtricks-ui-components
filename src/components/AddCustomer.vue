@@ -2,13 +2,13 @@
   <div class="relative flex flex-col min-h-screen w-full">
     <div class="flex-1 p-3 md:p-5 xl:px-14 xl:py-12">
       <div class="mb-7 pt-3 md:pt-0">
-        <h2 class="flex-1 text-5xl font-bold leading-none text-grey-800 pb-10">
+        <h2 class="flex-1 text-3xl sm:text-5xl font-bold leading-none text-grey-800 mb-5">
           Add Customer
         </h2>
         <div class="coverflow-hidden divide-y divide-grey-300">
           <div class="md:grid md:grid-cols-3 md:gap-6 mb-7">
             <div class="md:col-span-1">
-              <div class="px-4 sm:px-0">
+              <div class="px-4 sm:px-0 relative">
                 <h3 class="text-lg font-bold leading-6 text-grey-800">
                   Add contact information
                 </h3>
@@ -33,7 +33,7 @@
           </div>
           <div class="md:grid md:grid-cols-3 md:gap-6 mb-7 pt-7">
             <div class="md:col-span-1">
-              <div class="relative">
+              <div class="relative px-4 sm:px-0">
                 <h3 class="text-lg font-bold leading-6 text-grey-800">
                   Add a note
                 </h3>

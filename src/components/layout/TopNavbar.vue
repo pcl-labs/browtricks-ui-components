@@ -57,7 +57,7 @@
                   leave-to-class="transform opacity-0 scale-95"
                 >
                   <MenuItems
-                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-grey-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                   >
                     <div class="px-4 py-3" role="none">
                       <p class="text-lg" role="none">
@@ -86,8 +86,8 @@
                         <a
                           :href="item.href"
                           :class="[
-                            active ? 'bg-gray-100' : '',
-                            'block px-4 py-2 text-lg text-gray-700 text-left',
+                            active ? 'bg-grey-100' : '',
+                            'block px-4 py-2 text-lg text-grey-700 text-left',
                           ]"
                           >{{ item.name }}</a
                         >

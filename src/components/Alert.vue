@@ -39,7 +39,7 @@
       </div>
     <slot name="description"></slot>
   </div>
-    <div class="details relative border-t border-gray-200 p-4 text-sm text-white" v-if="showDetails">
+    <div class="details relative border-t border-grey-200 p-4 text-sm text-white" v-if="showDetails">
       <slot name="details"></slot>
     </div>
   </div>
