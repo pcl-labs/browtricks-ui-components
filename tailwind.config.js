@@ -12,7 +12,8 @@ module.exports = {
         sans: ["'Inter var'", ...defaultTheme.fontFamily.sans],
       },
 
-      colors: {     
+      colors: {
+     
         grey: {
           100: '#FAF9F9',
           200: '#F7F6F6',
@@ -35,7 +36,7 @@ module.exports = {
         blue: {
           DEFAULT: '#1062BF',
         },
-      
+    
       },
       spacing: {
         15: '3.75rem',

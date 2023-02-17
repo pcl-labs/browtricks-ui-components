@@ -43,7 +43,7 @@
           </div>
         </div>
         <!-- add media section table -->
-        <div v-if="isMoreMedia" class="overflow-hidden md:rounded-lg bg-white border border-grey-300 shadow-3">
+        <div v-if="isMoreMedia" class="overflow-hidden md:rounded-lg bg-white border-y md:border-x border-grey-300 shadow-3">
           <div class="p-4 pb-0 gap-2 md:gap-5 flex">
             <div class="flex flex-1 gap-2 md:gap-5">
               <div class="relative flex-1">
@@ -105,10 +105,9 @@
           </div>
           <div class="flex-col">
             <div class="overflow-x-auto">
-              <div class="inline-block min-w-full pt-2 align-middle md:px-0 lg:px-0">
-                <div class="overflow-hidden">
+            
                   <div class="inline-block min-w-full align-middle md:px-0 lg:px-0">
-                    <div class="overflow-hidden pt-2">
+                    <div class="overflow-hidden pt-4">
                       <table class="min-w-full border-0 border-collapse divide-y divide-grey-200">
                         <thead class="hidden sm:table-header-group">
                           <tr>
@@ -128,8 +127,7 @@
                           </tr>
                         </thead>
                         <tbody class="divide-y divide-grey-200 bg-white">
-                          <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true"
-                            class="odd:bg-white even:bg-grey-100">
+                          <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true" class="odd:bg-white even:bg-grey-100">
                             <td class="whitespace-nowrap p-3 pl-4 text-lg sm:pl-6">
                               <div class="flex items-center">
                                 <div
@@ -154,13 +152,12 @@
                               }}</a>
                             </td>
                             <td class="text-center">
-                              <a href="javascript:void(0)"
-                                class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
+                              <a href="javascript:void(0)" class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
                                 <LinkChain class="w-4 h-4" />
                               </a>
                             </td>
                             <td
-                              class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-grey-500 hidden sm:table-cell">
+                              class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-grey-700 hidden sm:table-cell">
                               {{ cust.date_added }}
                             </td>
                           </tr>
@@ -168,8 +165,7 @@
                       </table>
                     </div>
                   </div>
-                </div>
-              </div>
+                
             </div>
             <nav class="flex items-center justify-between border-t border-grey-200 bg-white px-4 py-3 sm:px-6"
               aria-label="Pagination">
@@ -242,7 +238,9 @@
       </div>
       <div class="space-y-2 mt-4">
         <Textarea rows="4" id="project-description" name="project-description" label-text="Description"
-          placeholder="great eyebrows" labelClasses="block xs:text-lg font-semibold text-grey-800" />
+          placeholder="great eyebrows" labelClasses="block xs:text-lg font-semibold text-grey-800" maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description" />
       </div>
       <div class="space-y-2 mt-4">
         <Input id="link" type="text" label-text="Link" name="link" v-model="password" placeholder="www.google.com"
@@ -406,7 +404,7 @@
     ComboboxOptions,
     ComboboxOption,
   } from '@headlessui/vue';
-
+  const description = ref('');
   const isMoreMedia = ref(false);
   const isUploadMedia = ref(false);
   const isCloseAlert = ref(false);

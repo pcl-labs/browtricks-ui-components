@@ -43,7 +43,10 @@
               <form action="#" method="POST">
                 <div class="overflow-hidden shadow-3 rounded-lg border border-grey-300">
                   <div class="space-y-6 bg-white px-4 py-5 sm:p-10">
-                    <Textarea name="text-note" rows="4" id="textNote" label-text="Note" />
+                    
+                    <Textarea name="text-note" rows="4" id="textNote" label-text="Note"  maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description" />
                   </div>
                 </div>
               </form>
@@ -64,7 +67,7 @@ import { ref } from 'vue';
 import Input from '@/components/Input.vue';
 import Button from '@/components/Button.vue';
 import Textarea from '@/components/Textarea.vue';
-
+const description = ref('');
 function consoleClick() {
   console.log('Button clicked');
 }

@@ -99,6 +99,9 @@
                   label-text="Answer"
                   placeholder=""
                   labelClasses="block xs:text-lg font-semibold text-grey-800"
+                  maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description"
                 />
               </div>
             </div>
@@ -189,13 +192,14 @@
  
 
 <script>
+import { ref } from 'vue';
 import TopNavbar from '@/components/layout/TopNavbar.vue';
 import SidebarNavigation from '@/components/layout/SidebarNavigation.vue';
 import CheckboxRadio from '@/components/CheckboxRadio.vue';
 import Textarea from '@/components/Textarea.vue';
 import Signature from '@/assets/icons/Signature.vue';
 import Button from '@/components/Button.vue';
-
+const description = ref('');
 export default {
   components: {
     TopNavbar,
