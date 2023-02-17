@@ -14,13 +14,16 @@
               autocomplete="formName"
             />
           </div>
-          <div class="relative">
+          <div class="relative">         
             <Textarea
               name="description"
               rows="4"
               id="description"
               label-text="Description"
+              maxlength="2000"
               placeholder="Please complete this form"
+              v-model.lazy="description"
+              :model-value="description"
             />
           </div>
         </div>
@@ -239,6 +242,7 @@ import LinkChain from '@/assets/icons/LinkChain.vue';
 import uploadedPdf from '@/assets/Pre_and_Post_Care_Agreement.png';
 import QuestionBuilder from './pmu/QuestionBuilder.vue';
 
+const description = ref('');
 const moreQuestions = ref(0);
 const isMoreQuestions = ref(false);
 const isUploadDocument = ref(false);

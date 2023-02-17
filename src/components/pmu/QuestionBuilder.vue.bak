@@ -19,9 +19,6 @@
               <Textarea
                 name="question"
                 rows="4"
-                maxlength="2000"
-              v-model.lazy="description"
-              :model-value="description"
               />
               <CheckboxRadio
                 id="visible"
@@ -144,7 +141,7 @@ import PlusCircle from '@/assets/icons/PlusCircle.vue';
 import TextLeftAlign from '@/assets/icons/TextLeftAlign.vue';
 import MultipleChoiceIcon from '@/assets/icons/MultipleChoiceIcon.vue';
 import CheckCircleIcon from '@/assets/icons/CheckCircleIcon.vue';
-const description = ref('');
+
 const questionTypeOptions = [
   {
     id: 1,

@@ -2,29 +2,77 @@
   <div class="relative flex flex-col w-full flex-1">
     <div class="flex-1 p-4 md:p-5 xl:px-14 xl:py-12 flex flex-col">
       <div class="space-y-6">
-        <h2 class="text-5xl font-bold leading-none text-grey-800">
+        <h2 class="text-3xl sm:text-5xl font-bold leading-none text-grey-800 ">
           Jane Doe Edit Page
         </h2>
         <div class="coverflow-hidden divide-y divide-grey-300">
           <!-- Main 3 column grid -->
           <div
-            class="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 lg:gap-8"
+            class="grid grid-cols-1 items-start gap-4 lg:grid-cols-3 xl:gap-8"
           >
             <!-- Left column -->
             <div class="grid grid-cols-1 gap-6 lg:col-span-2">
-              <div
-                class="overflow-hidden shadow-3 rounded-lg bg-white border border-grey-300"
-              >
-                <div class="p-4 sm:p-8 space-y-6">
+              <div class="overflow-hidden shadow-3 rounded-lg bg-white border border-grey-300"
+               >
+                <div class="p-4 xl:p-8 space-y-6">
                   <div class="flex flex-col space-y-2.5">
                     <h4 class="text-lg font-bold text-grey-800 leading-none">
                       Media
                     </h4>
+
+                <!-- If Media list adedd -->
+
+                
+                    <div class="overflow-hidden -my-3">
+                      <table class="min-w-full border-0 border-collapse divide-y divide-grey-200">
+                        
+                        <tbody class="divide-y divide-grey-600 bg-white">
+                          <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true" class="">
+                            <td class="whitespace-nowrap py-3 text-sm xs:text-lg  ">
+                              <div class="flex items-center">
+                                <div
+                                  class="h-14 w-14 flex justify-center items-center flex-shrink-0 overflow-hidden rounded">
+                                  <img class="aspect-square object-cover" :src="cust.image" alt="" />
+                                </div>
+                                <div class="ml-2 xs:ml-4">
+                                  <div class="font-medium text-grey-800">
+                                    {{ cust.name }}
+                                  </div>
+                                  <ul class="text-grey-700 flex flex-wrap gap-x-4 items-center list-disc list-inside "><li class="list-none">{{ cust.type }}</li><li> {{ cust.date_added }}</li><li class="list-none xs:list-disc w-full xs:w-auto block xs:list-item"><a href="javascript:void(0)"
+                                      class="hover:text-grey-900 text-blue hover:underline">{{ cust.name }}</a></li></ul>
+                                 
+                                </div>
+                              </div>
+                            </td>
+                          
+                             
+                            <td
+                              class="whitespace-nowrap py-3 text-right text-lg text-grey-500 ">
+                              <button
+                            type="button"
+                            class="rounded hover:bg-red-100 hover:text-red text-grey-900 p-2 ease-in-out duration-300"
+                            
+                          >
+                            <span class="sr-only">Close</span>
+                            <XMarkIcon class="block h-5 w-5 " />
+                          </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  
+                  <!-- else -->
+                 
                     <p class="text-lg text-grey-900 leading-tight font-medium">
                       This customer does not have<br />
                       any content yet.
                     </p>
                   </div>
+
+                  <!-- End If -->
+
+
 
                   <div class="mt-7">
                     <Button @click="consoleClick" :btn-primary="true"
@@ -34,10 +82,9 @@
                 </div>
               </div>
 
-              <div
-                class="overflow-hidden shadow-3 rounded-lg bg-white hidden flex-1 sm:flex justify-center items-center border border-grey-300"
+              <div class="overflow-hidden shadow-3 rounded-lg bg-white  flex-1 justify-center items-center border border-grey-300 hidden"
               >
-                <div class="p-4 sm:p-8 space-y-3 sm:pt-6 flex-1">
+                <div class="p-4 xl:p-8 space-y-3 sm:pt-6 flex-1">
                   <div class="flex items-center relative">
                     <h4 class="text-lg font-bold text-grey-900 leading-none">
                       PMU Forms
@@ -118,6 +165,7 @@
                           Procedure
                         </td>
                         <td class="text-right py-2">
+                          
                           <button
                             type="button"
                             class="rounded hover:bg-red-100 hover:text-red text-grey-900 p-2 ease-in-out duration-300"
@@ -135,8 +183,8 @@
               </div>
               <div
                 class="overflow-hidden shadow-3 rounded-lg bg-white flex-1 flex justify-center items-center border border-grey-300"
-              >
-                <div class="p-4 sm:p-8 space-y-6 flex-1">
+                >
+                <div class="p-4 xl:p-8 space-y-6 flex-1">
                   <div class="flex">
                     <p class="text-lg font-bold text-grey-900 leading-none">
                       PMU Form Timeline
@@ -182,7 +230,7 @@
                 </div>
               </div>
 
-              <div class="flex">
+              <div class="hidden lg:flex">
                 <Button
                   @click="deleteCustomerDailog = true"
                   :btn-danger="true"
@@ -194,9 +242,9 @@
             </div>
 
             <!-- Right column -->
-            <div class="grid grid-cols-1 gap-6 pb-12 sm:pb-0">
+            <div class="grid grid-cols-1 gap-6 ">
               <div class="overflow-hidden shadow-3 rounded-lg bg-white">
-                <div class="p-4 px-8 space-y-2">
+                <div class="p-4 xl:px-8 space-y-2">
                   <div class="flex items-center relative">
                     <h4 class="text-lg font-bold text-grey-900 leading-none">
                       Customer
@@ -210,7 +258,7 @@
                     >
                   </div>
                   <div class="customer-details">
-                    <p class="text-xl text-grey-500">
+                    <p class="text-xl text-grey-800">
                       Julia Barneby<br />
                       (888) 376-7160<br />
                       juliabarneby@gmail.com
@@ -219,7 +267,7 @@
                 </div>
               </div>
               <div class="overflow-hidden shadow-3 rounded-lg bg-white">
-                <div class="p-4 sm:p-8 space-y-6">
+                <div class="p-4 xl:p-8 space-y-6">
                   <div class="flex flex-col space-y-2.5">
                     <h4 class="text-lg font-bold text-grey-800 leading-none">
                       Notes
@@ -229,27 +277,36 @@
                     </p>
                   </div>
 
-                  <div class="mt-7 flex gap-2">
-                    <Button @click="addNoteDailog = true" :btn-primary="true"
+                  <div class="mt-7 flex flex-wrap gap-2">
+                    <Button class="" @click="addNoteDailog = true" :btn-primary="true"
                       >Add Notes</Button
                     >
                     <Button
                       @click="allNotesDailog = true"
                       :btn-no-border="true"
                       :btn-primary="false"
-                      class="xs:px-4"
+                      class="xs:px-4 "
                       >All Notes</Button
                     >
                   </div>
                 </div>
               </div>
             </div>
+            <div class="lg:hidden flex">
+                <Button
+                  @click="deleteCustomerDailog = true"
+                  :btn-danger="true"
+                  :btn-primary="false"
+                  class="bg-transparent sm:px-6"
+                  >Delete Customer</Button
+                >
+              </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  
   <!-- Dialog -->
   <!-- Add Note dailog -->
   <DialogPopup :open-dialog="addNoteDailog" @closeModal="addNoteDailog = false">
@@ -263,13 +320,16 @@
 
       <form action="#" method="POST">
         <div class="space-y-6">
-          <div class="space-y-1">
+          <div class="relative">
             <Textarea
               name="text-note"
               rows="4"
               id="textNote"
               label-text="Note"
               placeholder="I am being treated for, or was in the past for the following conditions (Please include allergies, especially to dye, pigment, or numbing agent.)"
+              maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description"
             />
           </div>
           <div class="flex justify-start gap-x-3">
@@ -394,14 +454,17 @@
       </div>
       <form action="#" method="POST">
         <div class="space-y-6">
-          <div class="space-y-1">
+          <div class="relative">
             <Textarea
               name="text-note"
               rows="4"
               id="textNote"
-              label-text="Note"
+              label-text="Note"             
               placeholder="I am being treated for, or was in the past for the following conditions (Please include allergies, especially to dye, pigment, or numbing agent.)"
-            />
+              maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description"
+              />
           </div>
           <div class="flex justify-start gap-x-3">
             <Button
@@ -618,7 +681,7 @@
           </div>
         </div>
     </div>
-  </DialogPopup>
+ </DialogPopup>
 
  <!-- Send PMU Form -->
  <DialogPopup
@@ -670,7 +733,11 @@
               rows="4"
               id="sandPMUForm"
               label-text="Custom message"
-              placeholder="please sign these forms"   />
+              placeholder="please sign these forms" 
+              maxlength="2000"
+              v-model.lazy="description"
+              :model-value="description"
+              />
 
              
           </div>
@@ -716,10 +783,7 @@
           </div>
         </div>
       </div>
-    </DialogPopup>
-
-
-
+ </DialogPopup>
 
 <!-- Review PMU Form -->
  <DialogPopup
@@ -768,7 +832,7 @@
         </div>
    
     </div>
-  </DialogPopup>
+ </DialogPopup>
 
 
 
@@ -788,6 +852,7 @@ import Button from '@/components/Button.vue';
 import Textarea from '@/components/Textarea.vue';
 import CheckboxRadio from '@/components/CheckboxRadio.vue';
 import { DialogTitle } from '@headlessui/vue';
+const description = ref('');
 const addNoteDailog = ref(false);
 const allNotesDailog = ref(false);
 const pmuFormList = ref(false);
@@ -796,7 +861,7 @@ const confirmSendPMUform = ref(false);
 const reviewPmuForm = ref(false);
 const editNoteDailog = ref(false);
 const editCustomerDailog = ref(false);
-const deleteCustomerDailog = ref(false);
+const deleteCustomerDailog = ref(false); 
 
 const activity = [
   {
@@ -818,4 +883,70 @@ const activity = [
 function consoleClick() {
   console.log('Button clicked');
 }
+
+
+const people = [
+  { id: 1, name: 'Wade Cooper' },
+  { id: 2, name: 'Arlene Mccoy' },
+  { id: 3, name: 'Devon Webb' },
+  { id: 4, name: 'Tom Cook' },
+  { id: 5, name: 'Tanya Fox' },
+  { id: 6, name: 'Hellen Schmidt' },
+];
+
+let selected = ref(people[0]);
+let query = ref('');
+
+ 
+
+const customers = [
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb- 1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Lindsay Walton',
+    url: '#',
+    title: 'Front-end Developer',
+    type: 'JPG',
+    date_added: 'Nov 28, 2022',
+    image:
+      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+];
+
+
+
 </script>
