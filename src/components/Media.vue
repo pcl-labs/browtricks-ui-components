@@ -127,34 +127,34 @@
                           </tr>
                         </thead>
                         <tbody class="divide-y divide-grey-200 bg-white">
-                          <tr v-for="cust in customers" :key="cust.email" @click="isUploadMedia = true" class="odd:bg-white even:bg-grey-100">
-                            <td class="whitespace-nowrap p-3 pl-4 text-lg sm:pl-6">
-                              <div class="flex items-center">
-                                <div
+                          <tr v-for="cust in customers" :key="cust.email" class="odd:bg-white even:bg-grey-100">
+                            <td class="whitespace-nowrap p-3 pl-4 text-lg sm:pl-6" >
+                              <div class="flex items-center cursor-pointer" >
+                                <div  @click="isUploadMedia = true"
                                   class="h-14 w-14 flex justify-center items-center flex-shrink-0 overflow-hidden rounded">
                                   <img class="aspect-square object-cover" :src="cust.image" alt="" />
                                 </div>
                                 <div class="ml-4">
-                                  <div class="font-medium text-grey-800">
+                                  <div class="font-medium text-grey-800"  @click="isUploadMedia = true">
                                     {{ cust.name }}
                                   </div>
-                                  <div class="text-grey-700 flex gap-2 items-center"><span>{{ cust.type }}</span><span
+                                  <div class="text-grey-700 flex gap-2 items-center"  @click="isUploadMedia = true"><span>{{ cust.type }}</span><span
                                       class="w-1 h-1 sm:hidden rounded-full bg-grey-700 block"></span><span
                                       class="sm:hidden">{{ cust.date_added }}</span></div>
-                                  <p class="sm:hidden"><a href="javascript:void(0)"
-                                      class="hover:text-grey-900 text-blue hover:underline">{{ cust.name }}</a></p>
+                                  <p class="sm:hidden"><router-link to="/customers-edit"
+                                      class="hover:text-grey-900 text-blue hover:underline">{{ cust.name }}</router-link></p>
                                 </div>
                               </div>
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-lg text-blue hidden sm:table-cell">
-                              <a href="javascript:void(0)" class="hover:text-grey-900 text-blue hover:underline">{{
+                              <router-link to="/customers-edit" class="hover:text-grey-900 text-blue hover:underline">{{
                                 cust.name
-                              }}</a>
+                              }}</router-link>
                             </td>
                             <td class="text-center">
-                              <a href="javascript:void(0)" class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
+                               <button @click="copyURL(textToCopy)"  class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
                                 <LinkChain class="w-4 h-4" />
-                              </a>
+                              </button>
                             </td>
                             <td
                               class="whitespace-nowrap px-3 py-4 pr-8 text-right text-lg text-grey-700 hidden sm:table-cell">
@@ -228,10 +228,10 @@
                 Jun 4, 2022
               </p>
             </div>
-            <a href="javascript:void(0)"
-              class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
+            <button @click="copyURL(textToCopy)" class="inline-flex items-center justify-center rounded-md border border-grey-300 bg-white text-lg font-medium text-blue shadow-sm hover:bg-blue hover:border-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-grey-300 focus:ring-offset-2 ease-in-out duration-300 w-9 h-9">
               <LinkChain class="w-4 h-4" />
-            </a>
+            
+            </button>
           </div>
         </div>
         <!-- End Picture Profile -->
@@ -455,7 +455,7 @@
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
   },
 ];
-
+const textToCopy = ref('Hello, this is copied text');
 const people = [
   { id: 1, name: 'Wade Cooper' },
   { id: 2, name: 'Arlene Mccoy' },
@@ -478,4 +478,17 @@ let filteredPeople = computed(() =>
           .includes(query.value.toLowerCase().replace(/\s+/g, ''))
       )
 );
+
+
+
+  async function copyURL(mytext) {
+    try {
+      await navigator.clipboard.writeText(mytext);
+      alert('Copied');
+    } catch($e) {
+      alert('Cannot copy');
+    }
+  }
+
+
 </script>
